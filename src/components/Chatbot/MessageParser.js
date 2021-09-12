@@ -19,14 +19,46 @@ class MessageParser {
         
         const lowerCaseMessage = message.toLowerCase()
     
-        if (lowerCaseMessage.includes("hello")) {
-
-        this.actionProvider.helloWorldHandler()
-
+      if (lowerCaseMessage.includes("hello")) {
+        this.actionProvider.helloWorldHandler();
         }
 
-        if (lowerCaseMessage.includes("todos")){
+      else if (lowerCaseMessage.includes("todos")){
           this.actionProvider.todosHandler();
+        }
+
+      else if (lowerCaseMessage.includes("download")) {
+          this.actionProvider.phoneHandler();
+
+          const lowerCaseMessage = message.toLowerCase()
+        
+          if (lowerCaseMessage.includes ("apple")){
+            this.actionProvider.dappleHandler();
+          }
+        }
+
+      else if (lowerCaseMessage.includes("reload")){
+          this.actionProvider.tngReloadHandler();
+        }
+
+      else if (lowerCaseMessage.includes("browse")){
+        this.actionProvider.browseIntHandler();
+      }
+
+      else if(lowerCaseMessage.includes("qr")){
+        this.actionProvider.scanQrHandler();
+      }
+
+      else if (lowerCaseMessage.includes("account")){
+          this.actionProvider.gooAccHandler();
+      }
+
+      else if (lowerCaseMessage.includes("switchon")){
+        this.actionProvider.switchOnHandler();
+      }
+
+      else {
+          this.actionProvider.errorHandler();
         }
       }
     }

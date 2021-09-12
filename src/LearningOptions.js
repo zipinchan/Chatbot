@@ -3,15 +3,31 @@ import "./LearningOptions.css";
 
 const LearningOptions = (props) => {
     const options = [
-      { text: "Knowledge Based", 
+      { text: "Apple", 
         handler: props.actionProvider.handleJavascriptList, 
         id: 1,
         },
 
-      { text: "Guidance Based", 
+      { text: "Samsung", 
         handler: props.actionProvider.handleJavascriptList, 
         id: 2,
         },
+
+      { text: "Huawei", 
+        handler: props.actionProvider.handleJavascriptList, 
+        id: 3,
+        },
+
+      { text: "Xiaomi", 
+        handler: props.actionProvider.handleJavascriptList, 
+        id: 4,
+        },
+
+      { text: "Oppo", 
+        handler: props.actionProvider.handleJavascriptList, 
+        id: 5,
+        },
+        
     ];
 
     const optionsMarkup = options.map((option) => (

@@ -2,6 +2,7 @@ import React from 'react';
 import { createChatBotMessage } from "react-chatbot-kit";
 import BotAvatar from "./components/BotAvatar/BotAvatar";
 import Todos from "./components/Todos/Todos";
+import Phone from "./LearningOptions";
 
 /* import LearningOptions from "./LearningOptions";
 import LinkList from "./LinkList"; */
@@ -32,6 +33,10 @@ const config = {
         widgetName: "todos",
         widgetFunc: (props) => <Todos {...props}/>, //check todos.jsx
         mapStateToProps: ["todos"],
+      },
+      {
+        widgetName: "phone",
+       widgetFunc: (props) => <Phone {...props} />,
       }
     ]
 

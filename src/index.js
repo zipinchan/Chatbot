@@ -15,7 +15,7 @@ ReactDOM.render(
 );
 
 const ActionProviderInstance = new ActionProvider(createChatBotMessage);
-const messageParser = new MessageParser()
+const messageParser = new MessageParser();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
