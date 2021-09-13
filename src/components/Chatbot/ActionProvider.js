@@ -5,7 +5,7 @@ class ActionProvider {
     constructor(createChatBotMessage, setStateFunc) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
-    
+      
     }
 
     helloWorldHandler = () => {
@@ -38,6 +38,11 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+    error2Handler = () => {
+      const message = this.createChatBotMessage("Please start your sentence with what or how")
+      this.setChatbotMessage(message);
+    }
+
     tngSignupHandler = () => {
       const message = this.createChatBotMessage("1. Click on \"Sign Up\" or \"Register\" or \"Create Account\" from your home screen. 2. Enter your phone number.  3. Enter the OTP from your message.  4. Set your own 6-digit pin to be used for payments and security question/answer.  5. Enter your personal details and you're done. ")
       this.setChatbotMessage(message);
@@ -48,9 +53,8 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-
     gooAccHandler = () => {
-      const message = this.createChatBotMessage("1. Go to the Google account Sign In page. \n\r 2. Click Create account. \n\r 3. Enter your name. \n\r 4. In the \"Username\" field, enter a username. \n\r 5. Enter and confirm your password. \n\r 6. Click Next. Optional: Add and verify a phone number for your account. \n\r 7. Add your birthday. \n\r 8. Select your gender. \n\r  9. Click Next. ", "\n", " 10. Click I agree (which means you agree to the terms mentioned above) \n\r 11. You're done!")
+      const message = this.createChatBotMessage("1. Go to the Google account Sign In page. 2. Click Create account. 3. Enter your name. 4. In the \"Username\" field, enter a username. &lt;br /&gt; 5. Enter and confirm your password. 6. Click Next. Optional: Add and verify a phone number for your account. \n\r 7. Add your birthday. \n\r 8. Select your gender. \n\r  9. Click Next.  \n10. Click I agree (which means you agree to the terms mentioned above) \n\r 11. You're done!")
         this.setChatbotMessage(message);
      }
 
@@ -60,7 +64,7 @@ class ActionProvider {
     }
 
     switchOnHandler =() => {
-      const message = this.createChatBotMessage(" It's usually a single button located along the top or right edge of the phone. Press and hold the power button. Wait for your phone to turn on. If you have a security code, you will need to enter it before you can access your phone.")
+      const message = this.createChatBotMessage("It's usually a single button located along the top or right edge of the phone. Press and hold the power button. Wait for your phone to turn on. If you have a security code, you will need to enter it before you can access your phone.")
       this.setChatbotMessage(message);
     }
 
@@ -79,6 +83,7 @@ class ActionProvider {
      this.setState(state =>({ ...state, messages: [...state.messages, message] }) ) //create chatbot message instance
     }
 
+    ////////////////////////////////////////////////////////////////////// knowledge based ////////////////////////////////////////////////////////////
 
    /* greet() {
         const greetingMessage = this.createChatBotMessage("Hi, friend.")

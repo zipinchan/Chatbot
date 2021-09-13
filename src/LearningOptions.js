@@ -4,7 +4,7 @@ import "./LearningOptions.css";
 const LearningOptions = (props) => {
     const options = [
       { text: "Apple", 
-        handler: props.actionProvider.handleJavascriptList, 
+        handler: props.actionProvider.dappleHandler, 
         id: 1,
         },
 

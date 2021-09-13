@@ -13,55 +13,68 @@ class MessageParser {
       this.actionProvider = actionProvider;
       this.state=state;
     }
-  
+    
     parse(message) {
       /*  console.log(message) */
         
-        const lowerCaseMessage = message.toLowerCase()
-    
-      if (lowerCaseMessage.includes("hello")) {
-        this.actionProvider.helloWorldHandler();
-        }
+      const lowerCaseMessage = message.toLowerCase()
 
-      else if (lowerCaseMessage.includes("todos")){
-          this.actionProvider.todosHandler();
-        }
+      
+      if(lowerCaseMessage.includes("how")){
 
-      else if (lowerCaseMessage.includes("download")) {
-          this.actionProvider.phoneHandler();
-
-          const lowerCaseMessage = message.toLowerCase()
-        
-          if (lowerCaseMessage.includes ("apple")){
-            this.actionProvider.dappleHandler();
+        if (lowerCaseMessage.includes("hello")) {
+          this.actionProvider.helloWorldHandler();
           }
+
+        else if (lowerCaseMessage.includes("todos")){
+            this.actionProvider.todosHandler();
+          }
+
+        else if (lowerCaseMessage.includes("download")) {
+            this.actionProvider.phoneHandler();
+          }
+
+        else if (lowerCaseMessage.includes("reload")){
+            this.actionProvider.tngReloadHandler();
+          }
+
+        else if (lowerCaseMessage.includes("browse")){
+          this.actionProvider.browseIntHandler();
         }
 
-      else if (lowerCaseMessage.includes("reload")){
-          this.actionProvider.tngReloadHandler();
+        else if(lowerCaseMessage.includes("qr")){
+          this.actionProvider.scanQrHandler();
         }
 
-      else if (lowerCaseMessage.includes("browse")){
-        this.actionProvider.browseIntHandler();
+        else if (lowerCaseMessage.includes("account")){
+            this.actionProvider.gooAccHandler();
+        }
+
+        else if (lowerCaseMessage.includes("switchon")){
+          this.actionProvider.switchOnHandler();
+        }
+
+        else {
+            this.actionProvider.errorHandler();
+          }
+      } //first if
+////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
+      else if (lowerCaseMessage.includes("what")) {
+        if (lowerCaseMessage.includes("download")) {
+          console.log("right");
+        }
+
+
       }
 
-      else if(lowerCaseMessage.includes("qr")){
-        this.actionProvider.scanQrHandler();
-      }
-
-      else if (lowerCaseMessage.includes("account")){
-          this.actionProvider.gooAccHandler();
-      }
-
-      else if (lowerCaseMessage.includes("switchon")){
-        this.actionProvider.switchOnHandler();
-      }
 
       else {
-          this.actionProvider.errorHandler();
-        }
-      }
-    }
+        this.actionProvider.error2Handler();
+      } //else
+
+    } //parse
+  }
+    
     
     export default MessageParser;
 
