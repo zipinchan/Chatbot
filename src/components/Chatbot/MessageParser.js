@@ -26,33 +26,77 @@ class MessageParser {
           this.actionProvider.helloWorldHandler();
           }
 
-        else if (lowerCaseMessage.includes("todos")){
-            this.actionProvider.todosHandler();
-          }
-
-        else if (lowerCaseMessage.includes("download")) {
+        else if (lowerCaseMessage.includes("download") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
             this.actionProvider.phoneHandler();
           }
 
-        else if (lowerCaseMessage.includes("reload")){
-            this.actionProvider.tngReloadHandler();
+/////////////////////// tng /////////////////////////
+
+        else if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng")){
+
+            if (lowerCaseMessage.includes("reload")){
+              this.actionProvider.tngReloadHandler();
+            }
+
+            else if (lowerCaseMessage.includes("transfer")){
+              this.actionProvider.tngTransferHandler();
+            }
+            
+            else if (lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up") || (lowerCaseMessage.includes("create") && lowerCaseMessage.includes("account")) ){
+            this.actionProvider.tngSignupHandler();
           }
 
-        else if (lowerCaseMessage.includes("browse")){
+          else {
+            this.actionProvider.errorHandler();
+          }
+        }
+////////////////////////////////////////////////////////////////
+
+        else if ((lowerCaseMessage.includes("browse") || lowerCaseMessage.includes("search")) && lowerCaseMessage.includes("internet")){
           this.actionProvider.browseIntHandler();
         }
 
-        else if(lowerCaseMessage.includes("qr")){
+        else if(lowerCaseMessage.includes("qr") && lowerCaseMessage.includes("scan")){
           this.actionProvider.scanQrHandler();
         }
 
-        else if (lowerCaseMessage.includes("account")){
+        else if (lowerCaseMessage.includes("account") && (lowerCaseMessage.includes("create") || lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up")) && lowerCaseMessage.includes("google")){
             this.actionProvider.gooAccHandler();
         }
 
-        else if (lowerCaseMessage.includes("switchon")){
+        else if ((lowerCaseMessage.includes("switchon") || lowerCaseMessage.includes("switch on") || lowerCaseMessage.includes("turn on") || lowerCaseMessage.includes("turnon")) && lowerCaseMessage.includes("phone")){
           this.actionProvider.switchOnHandler();
         }
+
+        /////////////////////// grab /////////////////////////
+
+        else if (lowerCaseMessage.includes("grab")){
+          if (lowerCaseMessage.includes("pay")){
+            this.actionProvider.grabPayHandler();
+          }
+
+          else if (lowerCaseMessage.includes("transfer")){
+            this.actionProvider.grabTransferHandler();
+          }
+
+          else if (lowerCaseMessage.includes("receive")){
+            this.actionProvider.grabReceiveHandler();
+          }
+          
+          else if (lowerCaseMessage.includes("order")){
+            this.actionProvider.grabOrderHandler();
+          }
+
+          else if (lowerCaseMessage.includes("ride")){
+            this.actionProvider.grabRideHandler();
+          }
+
+          else {
+            this.actionProvider.errorHandler();
+          }
+        }
+
+        //////////////////////////////////////////////
 
         else {
             this.actionProvider.errorHandler();
@@ -60,8 +104,12 @@ class MessageParser {
       } //first if
 ////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
       else if (lowerCaseMessage.includes("what")) {
-        if (lowerCaseMessage.includes("download")) {
-          console.log("right");
+        if (lowerCaseMessage.includes("qr")) {
+          this.actionProvider.qrKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("google")) {
+
         }
 
 
