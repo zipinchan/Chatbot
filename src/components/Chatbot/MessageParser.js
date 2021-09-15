@@ -91,6 +91,10 @@ class MessageParser {
             this.actionProvider.grabRideHandler();
           }
 
+          else if (lowerCaseMessage.includes("mart")){
+            this.actionProvider.grabMartHandler();
+          }
+
           else {
             this.actionProvider.errorHandler();
           }
@@ -109,12 +113,43 @@ class MessageParser {
         }
 
         else if (lowerCaseMessage.includes("google")) {
-
+          this.actionProvider.gooKnowledge();
         }
 
+        else if (lowerCaseMessage.includes("internet")) {
+          this.actionProvider.intKnowledge();
+        }
 
-      }
+        else if (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("apps") || lowerCaseMessage.includes("applications")){
+          this.actionProvider.appKnowledge();
+        }
 
+        //////////////////// grab //////////////////////////
+        else if (lowerCaseMessage.includes("grab")){
+          if (lowerCaseMessage.includes("pay") || lowerCaseMessage.includes("wallet")){
+            this.actionProvider.grabPayKnowledge();
+          }
+
+          else if (lowerCaseMessage.includes("food")){
+            this.actionProvider.grabFoodKnowledge();
+          }
+          
+          else if (lowerCaseMessage.includes("transfer")){
+            this.actionProvider.grabTransferKnowledge();
+          }
+
+          else if (lowerCaseMessage.includes("mart")){
+            this.actionProvider.grabMartKnowledge();
+          }
+
+          else {
+            this.actionProvider.grabKnowledge();
+          }
+
+          } // end grab
+
+        ////////////////////////////////////////////////////////
+        } //what
 
       else {
         this.actionProvider.error2Handler();

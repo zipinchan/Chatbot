@@ -34,7 +34,7 @@ class ActionProvider {
     }
 
     
-    /////////////// tng ///////////////////////
+/////////////// tng ///////////////////////
 
     tngSignupHandler = () => {
       const message = this.createChatBotMessage("1. Click on \"Sign Up\" or \"Register\" or \"Create Account\" from your home screen. 2. Enter your phone number.  3. Enter the OTP from your message.  4. Set your own 6-digit pin to be used for payments and security question/answer.  5. Enter your personal details and you're done. ")
@@ -51,7 +51,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-    /////////////////////////////////////////////////
+/////////////////////////////////////////////////
 
     gooAccHandler = () => {
       const message = this.createChatBotMessage("1. Go to the Google account Sign In page. 2. Click Create account. 3. Enter your name. 4. In the \"Username\" field, enter a username. 5. Enter and confirm your password. 6. Click Next. Optional: Add and verify a phone number for your account. 7. Add your birthday. 8. Select your gender. 9. Click Next.  \n10. Click I agree (which means you agree to the terms mentioned above) 11. You're done!")
@@ -73,7 +73,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-    //////////// Grab ////////////////////
+//////////// Grab ////////////////////
 
     grabPayHandler = () => {
       const message = this.createChatBotMessage("1. Click \"Payment\" located at bottom middle. 2. Click \"Scan to Pay\" and scan the QR code of the merchant. 3. Enter the amount to pay. 4. Swipe the green bar to confirm paying.")
@@ -100,13 +100,18 @@ class ActionProvider {
       this.setChatbotMessage(message);
       }
 
-      ///////////////////////////////////////////////////
+    grabMartHandler = () => {
+      const message = this.createChatBotMessage("1. Click \"Mart\" from your screen in the Grab app. 2. Type in the search bar located at the top of the screen for the items you want or scroll down to shop. 3. Click on the items you want to buy and click \"Add to Basket\". 4. Repeat steps 2-3 to continue adding items into your cart. 5. Click on basket at the bottom of your screen and confirm the details. 6. After confirmation, click \"Place Order\" to proceed payment.")
+      this.setChatbotMessage(message);
+    }
+
+  ///////////////////////////////////////////////////
    /* grabTransferHandler = () => {
       const message = this.createChatBotMessage()
       this.setChatbotMessage(message);
       }     */
 
-    ////////////////////////////////////////////////////////////////////// knowledge based ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////// knowledge based ////////////////////////////////////////////////////////////
     qrKnowledge = () => {
       const message = this.createChatBotMessage("Short for Quick Response, QR codes are a type of barcode easily readable with digital devices like smartphones. They store information as a series of pixels in a square grid that can be read in two directions — top to bottom and right to left — unlike standard barcodes that can only be read top to bottom.")
       this.setChatbotMessage(message);
@@ -122,8 +127,19 @@ class ActionProvider {
       this.setChatbotMessage(message); 
     }
 
+    appKnowledge = () => {
+      const message = this.createChatBotMessage("An app, which is short for \"application,\" is a type of software that can be installed and run on a computer, tablet, smartphone or other electronic devices. Simply put, an app is a type of software that allows you to perform specific tasks. For example, Whatsapp, Facebook, Grab etc.")
+      this.setChatbotMessage(message);
+    }
+
+//////////////////////// grab ////////////////////////
     grabKnowledge = () => {
       const message = this.createChatBotMessage("Grab is an easy to use on-demand car and taxi service that you can use to hail licensed taxis or business driving services in Malaysia, Philippines, India, Thailand, Singapore, Vietnam, and Indonesia.")
+      this.setChatbotMessage(message);
+    }
+
+    grabTransferKnowledge = () => {
+      const message = this.createChatBotMessage("Grab transfer is a method for you to transfer funds between your contacts in the Grab app, using your Grab wallet.")
       this.setChatbotMessage(message);
     }
 
@@ -132,10 +148,25 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-    appKnowledge = () => {
-      const message = this.createChatBotMessage("An app, which is short for \"application,\" is a type of software that can be installed and run on a computer, tablet, smartphone or other electronic devices. Simply put, an app is a type of software that allows you to perform specific tasks. For example, Whatsapp, Facebook, Grab etc.")
+    grabFoodKnowledge = () => {
+      const message = this.createChatBotMessage("GrabFood is Southeast Asia’s fastest growing food delivery service, serving customers delightful meals from street food to restaurant dining.")
       this.setChatbotMessage(message);
     }
+
+    grabMartKnowledge = () => {
+      const message = this.createChatBotMessage("GrabMart is an on-demand everyday goods delivery service. The delivery process is the same as GrabFood but instead of delivering food from restaurants, you will now deliver everyday goods from stores. You can now receive orders from pharmacies, convenience stores, book shop and many others.")
+      this.setChatbotMessage(message);
+    }
+
+///////////////////////////////////////////////////////
+
+/////////////////////// tng ///////////////////////////
+
+    tngKnowledge = () => {
+      const message = this.createChatBotMessage("Touch 'n Go eWallet is a Malaysian digital wallet and online payment platform, established in Kuala Lumpur, Malaysia, in July 2017 as a joint venture between Touch 'n Go and Ant Financial. It allows users to make payments at over 280,000 merchant touch points via QR code; pay for tolls, street parking, payment on e-hailing, car-sharing apps or taxis via RFID or PayDirect; pay bills; top-up mobile prepaid; pay for purchases on e-commerce websites or apps; order food delivery; perform peer-to-peer money transfers; renew car insurance and purchase unique insurance plans; and purchase movie, bus, trains, and airline tickets.")
+      this.setChatbotMessage(message);
+    }
+   
 
 //////////////// error////////////////
 
