@@ -28,8 +28,18 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
     
-    dappleHandler = () => {
+    appStoreHandler = () => {
       const message = this.createChatBotMessage("1. Launch the App Store. \n 2. Tap the magnifying glass on the bottom right of your screen. \n 3. Type in your search query and tap the search button. \n 4. Tap the app or game you wish to purchase or download for free. \n 5. Tap Get if it is free, or the price of the app if it is paid. \n 6. Place your finger on the Home button to activate Touch ID or double-click the side button for Face ID.")
+      this.setChatbotMessage(message);
+    }
+
+    playStoreHandler = () => {
+      const message = this.createChatBotMessage("1. From the home screen, select the Play store Play Store app. 2. Select the Search field. Enter the desired app name, then select a suggestion or the Search key. Select Install. 3. The download icon Downloading icon will appear in the Notification bar while the content is downloading. 4. To access the app after it has downloaded and installed, select Open or find it from your home screen. ")
+      this.setChatbotMessage(message); 
+    }
+
+    appGalleryHandler = () => {
+      const message = this.createChatBotMessage("1. To find it, open the phone’s app drawer and look for the red bag logo. Tap on this and you should be in App Gallery. 2. You’ll land on the Featured page. Search for the app you want by tapping the search bar at the top. Once your app comes up, click its list entry. This should then load up the app page. 3. At the bottom of the display should be a blue “Install” button. Tap this. Wait for the application to install. 4. The blue button should now say “Open”. Tap this and you should be in your newly installed app. ")
       this.setChatbotMessage(message);
     }
 
@@ -86,7 +96,7 @@ class ActionProvider {
     }
 
     grabReceiveHandler = () => {
-      const message = this.createChatBotMessage("1. Click \"Payment\" located at bottom middle. 2. Click \"Receive\" to transfer money to another person. 3. Ask the sender to scan your QR code if he/she is infront of you. 4. If not, click the link below to send the QR code via Whatsapp or any other apps.")
+      const message = this.createChatBotMessage("1. Click \"Payment\" located at the bottom middle of the Grab app. 2. Click \"Receive\" to transfer money to another person. 3. Ask the sender to scan your QR code if he/she is infront of you. 4. If not, click the link below to send the QR code via Whatsapp or any other apps.")
       this.setChatbotMessage(message);
     }
 
@@ -103,6 +113,10 @@ class ActionProvider {
     grabMartHandler = () => {
       const message = this.createChatBotMessage("1. Click \"Mart\" from your screen in the Grab app. 2. Type in the search bar located at the top of the screen for the items you want or scroll down to shop. 3. Click on the items you want to buy and click \"Add to Basket\". 4. Repeat steps 2-3 to continue adding items into your cart. 5. Click on basket at the bottom of your screen and confirm the details. 6. After confirmation, click \"Place Order\" to proceed payment.")
       this.setChatbotMessage(message);
+    }
+
+    grabReloadHandler = () => {
+      const message = this.createChatBotMessage("1. Click \"Payment\" located at the bottom middle of the Grab app. 2. Click \"Top Up\" located at the middle of the Grab app in your screen. 3. Choose the top-up methods you want from the list. 4. Add new card for card payment or select your bank for online banking method. 5. Enter the amount to be reloaded into your Grab wallet and click \"Next\". 6. Check for the minimum amount to be reloaded. 7. You're done!")
     }
 
   ///////////////////////////////////////////////////

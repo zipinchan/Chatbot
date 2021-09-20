@@ -22,11 +22,11 @@ class MessageParser {
       
       if(lowerCaseMessage.includes("how")){
 
-        if (lowerCaseMessage.includes("hello")) {
+        if (lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("what is your name") || lowerCaseMessage.includes("who are you")) {
           this.actionProvider.helloWorldHandler();
           }
 
-        else if (lowerCaseMessage.includes("download") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
+        else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
             this.actionProvider.phoneHandler();
           }
 
@@ -34,8 +34,8 @@ class MessageParser {
 
         else if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng")){
 
-            if (lowerCaseMessage.includes("reload")){
-              this.actionProvider.tngReloadHandler();
+          if (lowerCaseMessage.includes("reload") || lowerCaseMessage.includes("topup") || lowerCaseMessage.includes("top up")){
+            this.actionProvider.tngReloadHandler();
             }
 
             else if (lowerCaseMessage.includes("transfer")){
@@ -73,6 +73,10 @@ class MessageParser {
         else if (lowerCaseMessage.includes("grab")){
           if (lowerCaseMessage.includes("pay")){
             this.actionProvider.grabPayHandler();
+          }
+
+          else if (lowerCaseMessage.includes("reload") || lowerCaseMessage.includes("topup") || lowerCaseMessage.includes("top up")){
+            this.actionProvider.grabReloadHandler();
           }
 
           else if (lowerCaseMessage.includes("transfer")){
@@ -149,7 +153,10 @@ class MessageParser {
           } // end grab
 
         ////////////////////////////////////////////////////////
-        } //what
+        else {
+          this.actionProvider.errorHandler();
+        }      
+      } //what
 
       else {
         this.actionProvider.error2Handler();

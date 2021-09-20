@@ -4,29 +4,36 @@ import "./LearningOptions.css";
 const LearningOptions = (props) => {
     const options = [
       { text: "Apple", 
-        handler: props.actionProvider.dappleHandler, 
+        handler: props.actionProvider.appStoreHandler, 
         id: 1,
         },
 
       { text: "Samsung", 
-        handler: props.actionProvider.handleJavascriptList, 
+        handler: props.actionProvider.playStoreHandler, 
         id: 2,
         },
 
       { text: "Huawei", 
-        handler: props.actionProvider.handleJavascriptList, 
+        handler: props.actionProvider.appGalleryHandler, 
         id: 3,
         },
 
       { text: "Xiaomi", 
-        handler: props.actionProvider.handleJavascriptList, 
+        handler: props.actionProvider.playStoreHandler, 
         id: 4,
         },
 
       { text: "Oppo", 
-        handler: props.actionProvider.handleJavascriptList, 
+        handler: props.actionProvider.playStoreHandler, 
         id: 5,
         },
+
+      { text: "Others", 
+      handler: props.actionProvider.playStoreHandler, 
+      id: 6,
+      },
+
+
         
     ];
 
