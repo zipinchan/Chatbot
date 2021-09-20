@@ -19,20 +19,15 @@ class MessageParser {
         
       const lowerCaseMessage = message.toLowerCase()
 
+      if (lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) {
+        this.actionProvider.helloWorldHandler();
+        }
       
-      if(lowerCaseMessage.includes("how")){
-
-        if (lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("what is your name") || lowerCaseMessage.includes("who are you")) {
-          this.actionProvider.helloWorldHandler();
-          }
-
-        else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
-            this.actionProvider.phoneHandler();
-          }
+      else if(lowerCaseMessage.includes("how")){
 
 /////////////////////// tng /////////////////////////
 
-        else if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng")){
+         if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng")){
 
           if (lowerCaseMessage.includes("reload") || lowerCaseMessage.includes("topup") || lowerCaseMessage.includes("top up")){
             this.actionProvider.tngReloadHandler();
@@ -54,6 +49,10 @@ class MessageParser {
 
         else if ((lowerCaseMessage.includes("browse") || lowerCaseMessage.includes("search")) && lowerCaseMessage.includes("internet")){
           this.actionProvider.browseIntHandler();
+        }
+
+        else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
+          this.actionProvider.phoneHandler();
         }
 
         else if(lowerCaseMessage.includes("qr") && lowerCaseMessage.includes("scan")){

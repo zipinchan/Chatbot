@@ -117,6 +117,7 @@ class ActionProvider {
 
     grabReloadHandler = () => {
       const message = this.createChatBotMessage("1. Click \"Payment\" located at the bottom middle of the Grab app. 2. Click \"Top Up\" located at the middle of the Grab app in your screen. 3. Choose the top-up methods you want from the list. 4. Add new card for card payment or select your bank for online banking method. 5. Enter the amount to be reloaded into your Grab wallet and click \"Next\". 6. Check for the minimum amount to be reloaded. 7. You're done!")
+      this.setChatbotMessage(message);
     }
 
   ///////////////////////////////////////////////////
