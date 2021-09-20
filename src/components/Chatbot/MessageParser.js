@@ -27,7 +27,7 @@ class MessageParser {
 
 /////////////////////// tng /////////////////////////
 
-         if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng")){
+         if (lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng") || lowerCaseMessage.includes("touch 'n go")){
 
           if (lowerCaseMessage.includes("reload") || lowerCaseMessage.includes("topup") || lowerCaseMessage.includes("top up")){
             this.actionProvider.tngReloadHandler();
@@ -151,7 +151,15 @@ class MessageParser {
 
           } // end grab
 
-        ////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
+    /////////////////////////tng////////////////////////////
+      else if (lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng") || lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touch 'n go")){
+        this.actionProvider.tngKnowledge();
+      }
+
+
+
+  ////////////////////////////////////////////////////////////////
         else {
           this.actionProvider.errorHandler();
         }      
