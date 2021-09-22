@@ -43,6 +43,16 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+    dataAppleHandler = () => {
+      const message = this.createChatBotMessage("1. Go to settings app. 2. Go to \"Mobile Data\". 3. Toggle the button at \"Mobile Data\" by tapping on it. 4. Green button indicates that it is enabled. Grey button indicates that it is disabled.")
+      this.setChatbotMessage(message); 
+    }
+
+    dataAndroidHandler = () => {
+      const message = this.createChatBotMessage("1. Swipe down from the top of your screen with finger. 2. Tap on Mobile Data to on or off. ")
+      this.setChatbotMessage(message);
+    }
+
     
 /////////////// tng ///////////////////////
 
@@ -57,9 +67,15 @@ class ActionProvider {
     }
 
     tngTransferHandler = () => {
-      const message = this.createChatBotMessage("1. Click on \"Transfer\" from your home screen,  2. Enter a new contact number or choose from the contact list below to transfer money to someone.  3. Enter the amount to transfer  4. Fill in the information under \"transfer for\" for your own reference. 5. Click \"Confirm Transfer\"")
+      const message = this.createChatBotMessage("1. Click on \"Transfer\" from your home screen.  2. Enter a new contact number or choose from the contact list below to transfer money to someone.  3. Enter the amount to transfer  4. Fill in the information under \"transfer for\" for your own reference. 5. Click \"Confirm Transfer\"")
       this.setChatbotMessage(message);
     }
+
+    tngTransHisHandler = () => {
+      const message = this.createChatBotMessage("1. Click on \"Transaction History\" from your screen in your Grab app. 2. Click on the date to check the transaction history of a specific period of time. 3. Click on \"filter\" to see a specific type of transaction only. ")
+      this.setChatbotMessage(message);
+    }
+
 
 /////////////////////////////////////////////////
 
@@ -82,6 +98,18 @@ class ActionProvider {
       const message = this.createChatBotMessage("1. Open the QR Code reader on your phone. 2. Hold your device over a QR Code so that it's clearly visible within your smartphone's screen. Two things can happen when you correctly hold your smartphone over a QR Code.  *The phone automatically scans the code.  * On some readers, you have to press a button to snap a picture, not unlike the button on your smartphone camera. 3. If necessary, press the button.  4. You're directed to the page from the QR code. ")
       this.setChatbotMessage(message);
     }
+
+    ///////////////////// Google //////////////////////////////
+    clearHistHandler = () => {
+      const message = this.createChatBotMessage("1. Click \"History\" in the Chrome app. 2. Click \"Clear browsing data\" 3. Click \"Clear data\". ")
+      this.setChatbotMessage(message);
+    }
+
+    bookmarkHandler = () => {
+      const message = this.createChatBotMessage("1. Click on the three dots in vertical at the top right of the Chrome app. 2. Click the star icon to bookmark the current page. 3. Once the star is filled with colour, it indicates that the page is bookmarked. 4. Click on \"Bookmarks\" to view the bookmarks list. ")
+      this.setChatbotMessage(message);
+    }
+
 
 //////////// Grab ////////////////////
 
@@ -147,6 +175,22 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+    simKnowledge = () => {
+      const message = this.createChatBotMessage("SIM cards are small cards that contain a chip that holds a unique identification number, phone number and other data that links to the consumer")
+      this.setChatbotMessage(message);
+    }
+
+    mobileDataKnowledge = () => {
+      const message = this.createChatBotMessage("Mobile data is what allows your phone to get online when you're away from WiFi")
+      this.setChatbotMessage(message);
+    }
+
+    qrSafetyKnowledge = () => {
+      const message = this.createChatBotMessage("Only scan codes that come from a trusted sender. Hackers can create malicious QR codes which send users to fake websites that capture their personal data such as login credentials or even track their geolocation on their phone")
+      this.setChatbotMessage(message);
+    }
+
+
 //////////////////////// grab ////////////////////////
     grabKnowledge = () => {
       const message = this.createChatBotMessage("Grab is an easy to use on-demand car and taxi service that you can use to hail licensed taxis or business driving services in Malaysia, Philippines, India, Thailand, Singapore, Vietnam, and Indonesia.")
@@ -167,6 +211,17 @@ class ActionProvider {
       const message = this.createChatBotMessage("GrabFood is Southeast Asia’s fastest growing food delivery service, serving customers delightful meals from street food to restaurant dining.")
       this.setChatbotMessage(message);
     }
+
+    grabPayUseKnowledge = () => {
+      const message = this.createChatBotMessage("GrabPay can be used at rides, in-store purchase, grabfood, credits transfer, and prepaid top up. ")
+      this.setChatbotMessage(message);
+    }
+
+    grabSafetyKnowledge = () => {
+      const message = this.createChatBotMessage("You can set up a Grab PIN that is hard to guess. You should also keep your PIN secret without sharing with others. Contact Grab customer support when you think someone has gained unauthorized access to your Grab app. ")
+      this.setChatbotMessage(message);
+    }
+
 
     grabMartKnowledge = () => {
       const message = this.createChatBotMessage("GrabMart is an on-demand everyday goods delivery service. The delivery process is the same as GrabFood but instead of delivering food from restaurants, you will now deliver everyday goods from stores. You can now receive orders from pharmacies, convenience stores, book shop and many others.")
