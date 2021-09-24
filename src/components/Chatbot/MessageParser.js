@@ -23,7 +23,7 @@ class MessageParser {
         this.actionProvider.helloWorldHandler();
         }
       
-      else if(lowerCaseMessage.includes("how")){
+      else if(lowerCaseMessage.includes("how") || lowerCaseMessage.includes("steps") || lowerCaseMessage.includes("step")){
 
 /////////////////////// tng /////////////////////////
 
@@ -86,7 +86,7 @@ class MessageParser {
             this.actionProvider.grabReceiveHandler();
           }
           
-          else if (lowerCaseMessage.includes("order")){
+          else if (lowerCaseMessage.includes("order") || lowerCaseMessage.includes("food")){
             this.actionProvider.grabOrderHandler();
           }
 
