@@ -14,6 +14,7 @@ const config = {
     customComponents: {
       botAvatar:(props) =>  <BotAvatar {...props} /> 
     },
+    
     customStyles: {
       botMessageBox:{
         backgroundColor: "green",
@@ -22,11 +23,14 @@ const config = {
       chatButton: {
         backgroundColor:"green",
       },
+
     },
     
     state:{
       todos:[]
     },
+
+   
 
     widgets:[
       {

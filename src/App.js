@@ -1,21 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 import Chatbot from 'react-chatbot-kit' 
 import ActionProvider from './components/Chatbot/ActionProvider';
 import MessageParser from './components/Chatbot/MessageParser';
 import config from './config';
+import Home from './components/Home';
+import Navbar from './components/partial/Navbar';
+import Footer from './components/partial/Footer';
+import About from './components/About';
+import Registration from './components/Registration';
+import Contact from './components/Feedback';
+
 
 function App() {
-    return (
-      <div className="App">
-        <header className="App-header">
+
+  const [showBot, toggleBot] = useState(false);
+
+  return (
+
+    <div className="App-header">
+        
+      <Router>
+        <Navbar/>
+          <Switch>
+            <Route exact path='/'component={Home}/>
+            <Route path='/about' component={About}/>
+            <Route path='/register' component={Registration}/>
+            <Route path='/contact' component={Contact}/>
+          </Switch>
+
+
+        <Footer/>
+      </Router>
+
+
+      {showBot && (
+
+        <div className="app-chatbot-container">
         <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} />
-        </header>
-      </div>
-    );
-  }
-  
-  
-  
-  
-  export default App;
-  
+       </div> 
+
+        )}
+
+
+        <button
+          className="app-chatbot-button"
+          onClick={() => toggleBot((prev) => !prev)}
+        >
+          <div>Bot</div>
+          <svg viewBox="0 0 640 512" className="app-chatbot-button-icon">
+          </svg>
+        </button>
+
+
+    </div>
+  );
+}
+
+export default App;
