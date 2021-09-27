@@ -190,6 +190,32 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+    safetyHandler = () => {
+      var tips = [
+        "Avoid clicking on links in unsolicited emails & be wary of email attachments",
+        "Do not visit any untrusted website",
+        "When using credit card information for online purchase, lookout for \"HTTPS\" and lock icon",
+        "Avoid Public WIFI & Computers for online shopping",
+        "Set up Touch ID or Facial Recognition on your device and back it up with a unique PIN",
+        "Only download official apps from Google Play or App Store to avoid \"fake\" apps that mimic trusted brands in order to obtain your personal information.",
+        "Don't Jailbreak or Root your smartphone",
+        "Use different passwords for different accounts, if one is compromised, others remain safe",
+        "Use Multi-Factor Authentication (MFA) whenever available. It's your best defense against hacker",
+        "Use characters from ALL  categories, for example SeNioR#8Te$ch"
+      ];
+
+      var randomTips = tips[Math.floor(Math.random() * tips.length)];
+      const message = this.createChatBotMessage(randomTips);
+      this.setChatbotMessage(message);
+    }
+
+   /* optionsHandler = () => {
+      const message = this.createChatBotMessage("Click below for some tips on mobile applications safety.",
+      {
+        widget: "safetyTips",
+      });
+      this.setChatbotMessage(message);
+    } */
 
 //////////////////////// grab ////////////////////////
     grabKnowledge = () => {

@@ -2,14 +2,20 @@ import React from 'react';
 import { createChatBotMessage } from "react-chatbot-kit";
 import BotAvatar from "./components/BotAvatar/BotAvatar";
 import Todos from "./components/Todos/Todos";
-import Phone from "./LearningOptions";
+import Phone from "./components/Widgets/Phone";
+import Safety from './components/Widgets/Safety';
 
 /* import LearningOptions from "./LearningOptions";
 import LinkList from "./LinkList"; */
 
 const config = {
-  initialMessages: [createChatBotMessage("Hi, I'm here to help. What do you want to learn?", ),
+  initialMessages: [
+    createChatBotMessage("Hi, I'm here to help. What do you want to learn?", ),
+    createChatBotMessage("Click here for some safety tips", {
+      widget:"safetyTips"
+    })
     ],
+
     botName:"NerdyBot",
     customComponents: {
       botAvatar:(props) =>  <BotAvatar {...props} /> 
@@ -41,6 +47,10 @@ const config = {
       {
         widgetName: "phone",
        widgetFunc: (props) => <Phone {...props} />,
+      },
+      {
+        widgetName: "safetyTips",
+        widgetFunc: (props) => <Safety {...props} />,
       }
     ]
 

@@ -4,6 +4,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+
 html,
 body {
     margin: 0;
@@ -719,12 +721,14 @@ li.breadcrumb-item a {
 /*button*/
 
 .app-chatbot-button {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 30px;
     padding: 10px;
     color: #fff;
     background-color: #0d2d44;
+    background-image: url("../images/bot2.jpg");
+    background-size: cover;
     border: none;
     position: fixed;
     bottom: 25px;
@@ -734,6 +738,7 @@ li.breadcrumb-item a {
     flex-direction: column;
     align-items: center;
   }
+
   .app-chatbot-container {
     margin: 40px 0;
     display: flex;
@@ -745,9 +750,11 @@ li.breadcrumb-item a {
     box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
     border-radius: 5px;
   }
+
   .app-chatbot-button-icon {
     fill: #fff;
   }
+
 /*-- /about page-mid --*/
 
 .content-left-bottom h5 {

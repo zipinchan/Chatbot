@@ -127,6 +127,10 @@ class MessageParser {
           this.actionProvider.appKnowledge();
         }
 
+        else if (lowerCaseMessage.includes("tips") || lowerCaseMessage.includes("tip") && lowerCaseMessage.includes("safety")){
+          this.actionProvider.safetyHandler();
+        }
+
         //////////////////// grab //////////////////////////
         else if (lowerCaseMessage.includes("grab")){
           if (lowerCaseMessage.includes("pay") || lowerCaseMessage.includes("wallet")){
