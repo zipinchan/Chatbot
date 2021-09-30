@@ -34,11 +34,18 @@ class MessageParser {
             }
 
             else if (lowerCaseMessage.includes("transfer")){
+
+              if (lowerCaseMessage.includes("history") || lowerCaseMessage.includes("past")){
+                this.actionProvider.tngTransHisHandler();
+              }
+
+              else {
               this.actionProvider.tngTransferHandler();
+              }
             }
             
-            else if (lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up") || (lowerCaseMessage.includes("create") && lowerCaseMessage.includes("account")) ){
-            this.actionProvider.tngSignupHandler();
+          else if (lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up") || (lowerCaseMessage.includes("create") && lowerCaseMessage.includes("account")) ){
+          this.actionProvider.tngSignupHandler();
           }
 
           else {
@@ -51,9 +58,122 @@ class MessageParser {
           this.actionProvider.browseIntHandler();
         }
 
+        //////////////// app /////////////////
+        
+
+        else if (lowerCaseMessage.includes("delete") || lowerCaseMessage.includes("remove") || lowerCaseMessage.includes("uninstall")){
+          if (lowerCaseMessage.includes("apple")) {
+            this.actionProvider.deleteAppleHandler();
+        }
+
+          else if (lowerCaseMessage.includes("android")) {
+            this.actionProvider.deleteAndroidHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+
+        }
+
+        else if (lowerCaseMessage.includes("data") || lowerCaseMessage.includes("cellular")) {
+          if (lowerCaseMessage.includes("apple")){
+            this.actionProvider.dataAppleHandler();
+          }
+
+          else if (lowerCaseMessage.includes("android")){
+            this.actionProvider.dataAndroidHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+        }
+
+        else if (lowerCaseMessage.includes("update") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("applications"))) {
+          if (lowerCaseMessage.includes("apple")){
+            this.actionProvider.updateAppleHandler();
+          }
+
+          else if (lowerCaseMessage.includes("android")){
+            this.actionProvider.updateAndroidHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+        }
+
+        else if (lowerCaseMessage.includes("organize") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("applications"))) {
+          if (lowerCaseMessage.includes("apple")){
+            this.actionProvider.organizeAppleHandler();
+          }
+
+          else if (lowerCaseMessage.includes("android")){
+            this.actionProvider.organizeAndroidHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+        }
+
+        else if (lowerCaseMessage.includes("location services") || lowerCaseMessage.includes("location service") || lowerCaseMessage.includes("location")) {
+          if (lowerCaseMessage.includes("apple")){
+            this.actionProvider.locationAppleHandler();
+          }
+
+          else if (lowerCaseMessage.includes("android")){
+            this.actionProvider.locationAndroidHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+        }
+
+        else if (lowerCaseMessage.includes("location") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("applications"))) {
+          if (lowerCaseMessage.includes("apple")){
+            this.actionProvider.lAppleSettingsHandler();
+          }
+
+          else if (lowerCaseMessage.includes("android")){
+            this.actionProvider.lAndroidSettingsHandler();
+          }
+
+          else {
+            this.actionProvider.appErrorHandler();
+          }
+        }
+        
         else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) {
           this.actionProvider.phoneHandler();
         }
+
+        /////////////////////////////////////////////////////
+
+        ////////////////////// whatsapp ///////////////////
+
+        else if (lowerCaseMessage.includes("whatsapp") || lowerCaseMessage.includes("whats app") || lowerCaseMessage.includes("whatsapps")) {
+
+         if ((lowerCaseMessage.includes("register") || lowerCaseMessage.includes("create")) && lowerCaseMessage.includes("account")) {
+          this.actionProvider.waRegisterHandler();
+        }
+
+        else if ((lowerCaseMessage.includes("start") || lowerCaseMessage.includes("new") || lowerCaseMessage.includes("create")) && lowerCaseMessage.includes("chat")){
+          this.actionProvider.waStartChatHandler();
+        }
+
+        else if (lowerCaseMessage.includes("video") || lowerCaseMessage.includes("call")){
+          this.actionProvider.waStartVideoHandler();
+        }
+
+        else {
+          this.actionProvider.errorHandler();
+        }
+      }
+
+        ////////////////////////////////////////////////////
 
         else if(lowerCaseMessage.includes("qr") && lowerCaseMessage.includes("scan")){
           this.actionProvider.scanQrHandler();
@@ -66,6 +186,25 @@ class MessageParser {
         else if ((lowerCaseMessage.includes("switchon") || lowerCaseMessage.includes("switch on") || lowerCaseMessage.includes("turn on") || lowerCaseMessage.includes("turnon")) && lowerCaseMessage.includes("phone")){
           this.actionProvider.switchOnHandler();
         }
+
+        ///////////////// chrome ////////////////
+
+        else if (lowerCaseMessage.includes("chrome")) {
+          if (lowerCaseMessage.includes("history") && (lowerCaseMessage.includes("clear") || lowerCaseMessage.includes("remove") || lowerCaseMessage.includes("delete"))){
+            this.actionProvider.clearHistHandler();
+          }
+
+          else if (lowerCaseMessage.includes("bookmark") || lowerCaseMessage.includes("star")) {
+            this.actionProvider.bookmarkHandler();
+          }
+
+          else {
+            this.actionProvider.errorHandler();
+          }
+
+        }
+
+        /////////////////////////////////////////
 
         /////////////////////// grab /////////////////////////
 
@@ -127,8 +266,40 @@ class MessageParser {
           this.actionProvider.appKnowledge();
         }
 
-        else if (lowerCaseMessage.includes("tips") || lowerCaseMessage.includes("tip") && lowerCaseMessage.includes("safety")){
+        else if ((lowerCaseMessage.includes("tips") || lowerCaseMessage.includes("tip")) && lowerCaseMessage.includes("safety")){
           this.actionProvider.safetyHandler();
+        }
+
+        else if (lowerCaseMessage.includes("sim")){
+          this.actionProvider.simKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("mobile data") || lowerCaseMessage.includes("data") || lowerCaseMessage("cellular")) {
+          this.actionProvider.mobileDataKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("appstore") || lowerCaseMessage.includes("app store")) {
+          this.actionProvider.appStoreKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("playstore") || lowerCaseMessage.includes("play store") || lowerCaseMessage.includes("google store")) {
+          this.actionProvider.playStoreKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("airplane")) {
+          this.actionProvider.airplaneKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("wifi") || lowerCaseMessage.includes("wi fi") || lowerCaseMessage.includes("wi-fi")){
+          this.actionProvider.wifiKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("bluetooth")){
+          this.actionProvider.bluetoothKnowledge();
+        }
+
+        else if (lowerCaseMessage.includes("location")){
+          this.actionProvider.locationKnowledge();
         }
 
         //////////////////// grab //////////////////////////
@@ -156,11 +327,15 @@ class MessageParser {
           } // end grab
 
     ////////////////////////////////////////////////////////
+
+      else if (lowerCaseMessage.includes("whatsapp") || lowerCaseMessage.includes("whats app") || lowerCaseMessage.includes("whatsapps")){
+        this.actionProvider.whatsappKnowledge();
+      }
+
     /////////////////////////tng////////////////////////////
       else if (lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng") || lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touch 'n go")){
         this.actionProvider.tngKnowledge();
       }
-
 
 
   ////////////////////////////////////////////////////////////////

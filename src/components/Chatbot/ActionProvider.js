@@ -20,6 +20,8 @@ class ActionProvider {
       this.setChatbotMessage(message); //create chatbot message
     }
 
+    ////////////// app ///////////////////////////////////
+
     phoneHandler = () => {
       const message = this.createChatBotMessage("What phone are you using?",
       {
@@ -52,6 +54,83 @@ class ActionProvider {
       const message = this.createChatBotMessage("1. Swipe down from the top of your screen with finger. 2. Tap on Mobile Data to on or off. ")
       this.setChatbotMessage(message);
     }
+
+    deleteAppleHandler = () => {
+      const message = this.createChatBotMessage("From your phone page, select the App icon: 1. Tap and hold the App that you want to delete 2. Wait until the pop-up menu display 3. Click ‘Remove App’ to delete / uninstall the App")
+      this.setChatbotMessage(message);
+    }
+
+    deleteAndroidHandler = () => {
+      const message = this.createChatBotMessage("From your phone page, select the App icon: 1. Tap and hold the App that you want to delete 2. Wait until the pop-up menu display 3. Click ‘Uninstall’ to delete / uninstall the App")
+      this.setChatbotMessage(message);
+    }
+
+    appErrorHandler = () => {
+      const message = this.createChatBotMessage("Please specific if you are using an Apple or Android phone.")
+      this.setChatbotMessage (message);
+    }
+
+    updateAppleHandler = () => {
+      const message = this.createChatBotMessage("1. Open the App Store 2. Tap your profile icon at the top of the screen 3. Scroll to see pending updates and release notes 4. Tap Update next to an app to update only that app, or tap Update All * If it didn’t appear “UPDATE” button, the app is the latest version")
+      this.setChatbotMessage(message);
+    }
+
+    updateAndroidHandler = () => {
+      const message = this.createChatBotMessage("1 Open the App Store 2. Tap your profile icon at the top 3. Click \"Manage apps and device\" 4. Click “See recent updates” 5. Tap on “Update available”")
+      this.setChatbotMessage(message);
+    }
+
+    organizeAppleHandler = () => {
+      const message = this.createChatBotMessage("1. Tap and hold the app until the icons start to jiggle, then move it on top of another app or folder OR Tap and hold the app, and then tap “Edit Home Screen” in the menu that appears. 2. When you’re done organizing, swipe up from the bottom (iPhone X or later) or press the Home button (iPhone 8 orSE2) to make the apps stop jiggling.")
+      this.setChatbotMessage(message);
+    }
+
+    organizeAndroidHandler = () => {
+      const message = this.createChatBotMessage("1. Touch and hold an app 2. Drag that app on top of another or existing folder and lift your finger")
+      this.setChatbotMessage(message); 
+    }
+
+    organizeTipsHandler = () => {
+      const message = this.createChatBotMessage("1. Put Important Apps on the First Home Screen 2. Put the apps you use most often in the Dock, and any remaining ones on your Home screen 3. One way to make the Dock more useful is to put a folder in it")
+      this.setChatbotMessage(message);
+    }
+
+    locationAppleHandler = () => { 
+      const message = this.createChatBotMessage("1. Go to settings. 2. Click on \"Privacy\". 3. Tap at \"Location Services\" to enable or disable it.")
+      this.setChatbotMessage(message);
+    }
+    
+    locationAndroidHandler = () => {
+      const message = this.createChatBotMessage("1. Go to settings. 2. Click on \"Location\". 3. Tap on Location to enable or disable it. ")
+      this.setChatbotMessage(message);
+    }
+
+    lAppleSettingsHandler = () => {
+      const message = this.createChatBotMessage("1. Go to settings. 2. Click on \"Privacy\". 3. Scroll down the list to disable location services for a specific app.")
+      this.setChatbotMessage(message);
+    }
+
+    lAndroidSettingsHandler = () => {
+      const message = this.createChatBotMessage("1. Go to settings. 2. Go to App management. 3. Click on \"Location\" 3. Scroll down the list to set the location services of a specific app. ")
+      this.setChatbotMessage(message);
+    }
+
+/////////////////////////////////////////////////////
+
+waRegisterHandler = () => {
+  const message = this.createChatBotMessage("1. Tap \"Agree and Continue\" 2. Enter your country code and phone number 3. Tap OK 4. Enter the code receive from SMS 5. Follow the prompts until complete")
+  this.setChatbotMessage(message);
+}
+
+waStartChatHandler = () => {
+  const message = this.createChatBotMessage("1. Tap on the icon at the bottom right on Android phone and top right on Apple phone. 2. Tap on the contact to begin a chat.")
+  this.setChatbotMessage(message);
+}
+
+waStartVideoHandler = () => {
+  const message = this.createChatBotMessage("1. Tap on the contact you want to start a video call with. 2. Look for the Video icon at the top right in Whatsapp. ")
+  this.setChatbotMessage(message);
+}
 
     
 /////////////// tng ///////////////////////
@@ -170,6 +249,8 @@ class ActionProvider {
       this.setChatbotMessage(message); 
     }
 
+    /////////// phone /////////////////
+
     appKnowledge = () => {
       const message = this.createChatBotMessage("An app, which is short for \"application,\" is a type of software that can be installed and run on a computer, tablet, smartphone or other electronic devices. Simply put, an app is a type of software that allows you to perform specific tasks. For example, Whatsapp, Facebook, Grab etc.")
       this.setChatbotMessage(message);
@@ -185,8 +266,47 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+    appStoreKnowledge = () => {
+      const message = this.createChatBotMessage("App stores typically take the form of an online store, where users can browse through these different app categories, view information about each app such as reviews or ratings, and acquire the app.")
+      this.setChatbotMessage(message);
+    }
+
+    playStoreKnowledge = () => {
+      const message = this.createChatBotMessage("It allows users to browse and download applications developed with the Android software development kit (SDK) and published through Google.")
+      this.setChatbotMessage(message);
+    }
+
+    airplaneKnowledge = () => {
+      const message = this.createChatBotMessage("Airplane Mode disables a device’s cellular radio, Wi-Fi, and Bluetooth—all the wireless transmission functions.")
+      this.setChatbotMessage(message);
+    }
+
+    wifiKnowledge = () => {
+      const message = this.createChatBotMessage("WiFi is commonly used for local area networking of devices and Internet access, allowing nearby digital devices to exchange data by radio waves.")
+      this.setChatbotMessage(message);
+    }
+
+    bluetoothKnowledge = () => {
+      const message = this.createChatBotMessage("Bluetooth is a short-range wireless technology standard used for exchanging data between fixed and mobile devices over short distances.")
+      this.setChatbotMessage(message);
+    }
+
+    locationKnowledge = () => {
+      const message = this.createChatBotMessage("Location Services uses GPS and Bluetooth (where they're available), along with crowd-sourced Wi-Fi hotspots and cellular towers to determine the approximate location of your device.")
+      this.setChatbotMessage(message);
+    }
+
+ 
+
+    ////////////////////////////////////////
+
     qrSafetyKnowledge = () => {
       const message = this.createChatBotMessage("Only scan codes that come from a trusted sender. Hackers can create malicious QR codes which send users to fake websites that capture their personal data such as login credentials or even track their geolocation on their phone")
+      this.setChatbotMessage(message);
+    }
+
+    whatsappKnowledge = () => {
+      const message = this.createChatBotMessage("WhatsApp uses your phone’s cellular or Wi-Fi connection to facilitate messaging and voice calling to nearly anyone on the planet, alone or in a group and is especially nice for families and small collaborative workgroups. The app lets you make calls, send and receive messages, and share documents, photos, and videos.")
       this.setChatbotMessage(message);
     }
 
