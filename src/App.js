@@ -9,7 +9,7 @@ import Navbar from './components/partial/Navbar';
 import Footer from './components/partial/Footer';
 import About from './components/About';
 import Registration from './components/Registration';
-import Contact from './components/Feedback';
+import Feedback from './components/Feedback';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Route exact path='/'component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/register' component={Registration}/>
-            <Route path='/contact' component={Contact}/>
+            <Route path='/contact' component={Feedback}/>
           </Switch>
 
 
