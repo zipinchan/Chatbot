@@ -1,7 +1,6 @@
-import * as firebase from 'firebase';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import 'firebase/firestore';
+import { getDatabase } from 'firebase/database';
 
 var firebaseApp = {
 
@@ -18,6 +17,6 @@ var firebaseApp = {
   const app = initializeApp(firebaseApp);
   const analytics = getAnalytics(app);
 
-var db = firebaseApp.firestore();
+var db = getDatabase(app);
 
 export { db };
