@@ -52,8 +52,9 @@ class Feedback extends Component{
                             </div>
                         </div>
 
+
                         <div class="form-group mx-auto mt-3">
-                            <button onClick={writeUserData('fname', 'lname', 'email', 'feedback')} class="btn submit">Submit</button> 
+                            {/* <button onClick={writeUserData(fname, lname, email, feedback) } class="btn submit">Submit</button> */}
                            {/*<button onClick="writeUserData(fname, lname, email, feedback);" class="btn submit">Submit</button>*/}
                         </div>
                          
