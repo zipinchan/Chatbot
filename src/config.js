@@ -11,7 +11,7 @@ import LinkList from "./LinkList"; */
 const config = {
   initialMessages: [
     createChatBotMessage("Hi, I'm here to help. What do you want to learn?", ),
-    createChatBotMessage("OR",),
+    createChatBotMessage("or",),
     createChatBotMessage("Click here for some safety tips", {
       widget:"safetyTips"
     })

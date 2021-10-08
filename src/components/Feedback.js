@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import {db} from '../firebase';
+import {db, writeUserData} from '../firebase';
+
 
 class Feedback extends Component{
     render(){
@@ -52,7 +53,8 @@ class Feedback extends Component{
                         </div>
 
                         <div class="form-group mx-auto mt-3">
-                            <button type="submit" class="btn submit">Submit</button>
+                            <button onClick={writeUserData('fname', 'lname', 'email', 'feedback')} class="btn submit">Submit</button> 
+                           {/*<button onClick="writeUserData(fname, lname, email, feedback);" class="btn submit">Submit</button>*/}
                         </div>
                          
                         
@@ -62,9 +64,14 @@ class Feedback extends Component{
 
                 </form>
 
+                <script type="text/javascript" src="../firebase.js">
+
+
+                </script>
+
             </div>
 
-            <script src="../firebase.js"> </script>
+            
 
         </div>
 
