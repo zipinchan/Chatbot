@@ -4,6 +4,22 @@ import {db, writeUserData} from '../firebase';
 
 
 class Feedback extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            fname: '',
+            lname: '',
+            email: '',
+            feedback: ''
+        };
+    
+        // this.handleChange = this.handleChange.bind(this);
+      }
+
+    //   handleChange() {
+
+    //   }
+
     render(){
         return(
 			<div>
@@ -33,28 +49,30 @@ class Feedback extends Component{
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input class="form-control" id="fname" type="text" name="Name" placeholder="" required="" />
+                                <input class="form-control" id="fname" type="text" name="Name" placeholder="" required="" onChange={event => this.setState({ fname: event.target.value})} />
                             </div>
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input class="form-control" id="lname" type="text" name="Name" placeholder="" required="" />
+                                <input class="form-control" id="lname" type="text" name="Name" placeholder="" required="" onChange={event => this.setState({ lname: event.target.value})}/>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input class="form-control" id="email" type="email" name="Email" placeholder="" required="" />
+                                <input class="form-control" id="email" type="email" name="Email" placeholder="" required="" onChange={event => this.setState({ email: event.target.value})}/>
                             </div>
                         </div>
                         
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Write Message</label>
-                                <textarea class="form-control" id="feedback" name="Message" placeholder="" required=""></textarea>
+                                <textarea class="form-control" id="feedback" name="Message" placeholder="" required="" onChange={event => this.setState({ feedback: event.target.value})}></textarea>
                             </div>
                         </div>
 
 
                         <div class="form-group mx-auto mt-3">
-                            {/* <button onClick={writeUserData(fname, lname, email, feedback) } class="btn submit">Submit</button> */}
+                            <button onClick={() => writeUserData(this.state.fname, this.state.lname, this.state.email, this.state.feedback) } class="btn submit">Submit</button>
+
+
                            {/*<button onClick="writeUserData(fname, lname, email, feedback);" class="btn submit">Submit</button>*/}
                         </div>
                          
