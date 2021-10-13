@@ -1,4 +1,4 @@
-//The actionprovider controls what kind of action that the chatbot is going to perform. 
+//The actionprovider controls what kind of action that the chatbot is going to perform.
 //The actionprovider is given the createChatBotMessage and createClientMessage functions in the constructor, which you can use to create a new responses.
 
 class ActionProvider {
@@ -33,14 +33,14 @@ class ActionProvider {
     handler = (list) => {
       for(let i = 0; i < list.length; i++){
         // console.log(this.state.appleArray[i]);
-        this.setChatbotMessage(this.createChatBotMessage(list[i].message)); 
+        this.setChatbotMessage(this.createChatBotMessage(list[i].message));
       }
       // console.log(list);
     }
-    
+
     // appStoreHandler = () => {
     //   const message = this.createChatBotMessage("1. Launch the App Store.")
-    //   this.setChatbotMessage(message); 
+    //   this.setChatbotMessage(message);
     //   const message2 = this.createChatBotMessage("2. Tap the magnifying glass on the bottom right of your screen.")
     //   this.setChatbotMessage(message2);
     //   const message3 = this.createChatBotMessage("3. Type in your search query and tap the search button.")
@@ -55,7 +55,7 @@ class ActionProvider {
 
     // playStoreHandler = () => {
     //   const message = this.createChatBotMessage("1. From the home screen, select the Play store Play Store app. 2. Select the Search field. Enter the desired app name, then select a suggestion or the Search key. Select Install. 3. The download icon Downloading icon will appear in the Notification bar while the content is downloading. 4. To access the app after it has downloaded and installed, select Open or find it from your home screen. ")
-    //   this.setChatbotMessage(message); 
+    //   this.setChatbotMessage(message);
     // }
 
     // appGalleryHandler = () => {
@@ -65,7 +65,7 @@ class ActionProvider {
 
     // dataAppleHandler = () => {
     //   const message = this.createChatBotMessage("1. Go to settings app. 2. Go to \"Mobile Data\". 3. Toggle the button at \"Mobile Data\" by tapping on it. 4. Green button indicates that it is enabled. Grey button indicates that it is disabled.")
-    //   this.setChatbotMessage(message); 
+    //   this.setChatbotMessage(message);
     // }
 
     // dataAndroidHandler = () => {
@@ -105,7 +105,7 @@ class ActionProvider {
 
     // organizeAndroidHandler = () => {
     //   const message = this.createChatBotMessage("1. Touch and hold an app 2. Drag that app on top of another or existing folder and lift your finger")
-    //   this.setChatbotMessage(message); 
+    //   this.setChatbotMessage(message);
     // }
 
     organizeTipsHandler = () => {
@@ -113,11 +113,11 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-    // locationAppleHandler = () => { 
+    // locationAppleHandler = () => {
     //   const message = this.createChatBotMessage("1. Go to settings. 2. Click on \"Privacy\". 3. Tap at \"Location Services\" to enable or disable it.")
     //   this.setChatbotMessage(message);
     // }
-    
+
     // locationAndroidHandler = () => {
     //   const message = this.createChatBotMessage("1. Go to settings. 2. Click on \"Location\". 3. Tap on Location to enable or disable it. ")
     //   this.setChatbotMessage(message);
@@ -150,7 +150,7 @@ class ActionProvider {
 //   this.setChatbotMessage(message);
 // }
 
-    
+
 /////////////// tng ///////////////////////
 
     // tngSignupHandler = () => {
@@ -221,7 +221,7 @@ class ActionProvider {
     // grabPayHandler = () => {
     //   const message = this.createChatBotMessage("1. Click \"Payment\" located at bottom middle. 2. Click \"Scan to Pay\" and scan the QR code of the merchant. 3. Enter the amount to pay. 4. Swipe the green bar to confirm paying.")
     //   this.setChatbotMessage(message);
-    // } 
+    // }
 
     // grabTransferHandler = () => {
     //   const message = this.createChatBotMessage("1. Click \"Payment\" located at bottom middle. 2. Click \"Send\" to transfer money to another person. 3. Search for the contact from the list or enter the mobile number in the search bar at the top. 4. Enter the amount to transfer and leave a note if you want. 5. Swipe the green bar at the bottom to confirm transferring the money to the person at the top of the screen. 6. You're done!")
@@ -236,8 +236,8 @@ class ActionProvider {
     // grabOrderHandler = () => {
     //   const message = this.createChatBotMessage("1. Click \"Food\" from your screen in the Grab app. 2. Search for the restaurants you want to order from. 3. To search with filters (halal / non-halal etc.), tap on the search bar at the top of the screen. 4. Scroll down to find the type of cuisine you want. 5. Click into the restaurant. 6. Look through the menu and click on the food you want. 7. Add on any instructions under special instructions. 8. Press \"Add to Basket\" at the bottom of the screen. 8. After done adding all the food you want by repeating steps 6-8, click on the basket at the bottom of your screen. 9. Click on the address under \"Deliver to\" and add in your address at the search bar on top. 10. Tap on \"Contactless Delivery\" to change it to Self-Pick up or do nothing to choose Contactless Delivery. 11. Confirm the order summary. 12. Tick the Cutlery tick box if you need cutleries. 13. Under payment details, click on the left side \"cash\" icon to change payment method. 14. To add a new card, click \"Add Payment Methods\". 15. Confirm the total payment and click \"Place Order\". 16. Once your order is received, you can just sit back and relax for the delivery to come to you!")
     //   this.setChatbotMessage(message);
-    //   }      
-    
+    //   }
+
     // grabRideHandler = () => {
     //   const message = this.createChatBotMessage("1. Click \"Car\" from your screen in the Grab app. 2. Type in your starting and ending locations. 3. Choose your vehicle option. 4. Tap on the cash icon to change payment method. 5. Tap on \"Promo\" if you have a promo code. 6. Click on \"Book\" at the bottom of your screen to book. 7. Once a driver is found, you're done! 8. You can keep track of your driver in real-time on your screen!")
     //   this.setChatbotMessage(message);
@@ -269,10 +269,10 @@ class ActionProvider {
     //   const message = this.createChatBotMessage("")
     //   this.setChatbotMessage(message);
     // }
-    
+
     // intKnowledge = () => {
     //   const message = this.createChatBotMessage("The Internet is a vast network that connects computers all over the world. Through the Internet, people can share information and communicate from anywhere with an Internet connection.")
-    //   this.setChatbotMessage(message); 
+    //   this.setChatbotMessage(message);
     // }
 
     /////////// phone /////////////////
@@ -322,7 +322,7 @@ class ActionProvider {
     //   this.setChatbotMessage(message);
     // }
 
- 
+
 
     ////////////////////////////////////////
 
@@ -408,7 +408,7 @@ class ActionProvider {
     //   const message = this.createChatBotMessage("Touch 'n Go eWallet is a Malaysian digital wallet and online payment platform, established in Kuala Lumpur, Malaysia, in July 2017 as a joint venture between Touch 'n Go and Ant Financial. It allows users to make payments at over 280,000 merchant touch points via QR code; pay for tolls, street parking, payment on e-hailing, car-sharing apps or taxis via RFID or PayDirect; pay bills; top-up mobile prepaid; pay for purchases on e-commerce websites or apps; order food delivery; perform peer-to-peer money transfers; renew car insurance and purchase unique insurance plans; and purchase movie, bus, trains, and airline tickets.")
     //   this.setChatbotMessage(message);
     // }
-   
+
 
 //////////////// error////////////////
 
@@ -421,19 +421,19 @@ class ActionProvider {
     //   const message = this.createChatBotMessage("Sorry, I don't have an answer for that.")
     //   this.setChatbotMessage(message);
     // }
-  
+
 /////////////////////////////////////////
     setChatbotMessage = (message) => {
      this.setState(state =>({ ...state, messages: [...state.messages, message] }) ) //create chatbot message instance
     }
 
 
-      
+
    /* greet() {
         const greetingMessage = this.createChatBotMessage("Hi, friend.")
         this.updateChatbotState(greetingMessage)
       }
-      
+
       handleJavascriptList = () => {
         const message = this.createChatBotMessage(
           "What do u want to know about? :)",
@@ -443,19 +443,18 @@ class ActionProvider {
 
 
         );
-   
+
       this.updateChatbotState(message);
         };
 
      updateChatbotState(message) {
     // NOTE: This function is set in the constructor, and is passed in      // from the top level Chatbot component. The setState function here     // actually manipulates the top level state of the Chatbot, so it's     // important that we make sure that we preserve the previous state.
-            
+
        this.setState(prevState => ({
             ...prevState, messages: [...prevState.messages]
         }));
       }
     */
   }
-  
+
   export default ActionProvider;
-  

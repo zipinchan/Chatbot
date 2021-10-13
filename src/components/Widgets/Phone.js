@@ -27,39 +27,68 @@ var appGalleryHandler = [
 
 
 const Phone = (props) => {
+    // const options = [
+    //   { text: "Apple",
+    //     handler: props.actionProvider.appStoreHandler,
+    //     id: 1,
+    //     },
+    //
+    //   { text: "Samsung",
+    //     handler: props.actionProvider.playStoreHandler,
+    //     id: 2,
+    //     },
+    //
+    //   { text: "Huawei",
+    //     handler: props.actionProvider.appGalleryHandler,
+    //     id: 3,
+    //     },
+    //
+    //   { text: "Xiaomi",
+    //     handler: props.actionProvider.playStoreHandler,
+    //     id: 4,
+    //     },
+    //
+    //   { text: "Oppo",
+    //     handler: props.actionProvider.playStoreHandler,
+    //     id: 5,
+    //     },
+    //
+    //   { text: "Others",
+    //     handler: props.actionProvider.playStoreHandler,
+    //     id: 6,
+    //   },
+    // ];
+
     const options = [
-      { text: "Apple", 
-        handler: () => props.actionProvider.handler(appStoreHandler), 
+      { text: "Apple",
+        handler: () => props.actionProvider.handler(appStoreHandler),
         id: 1,
         },
 
-      { text: "Samsung", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+      { text: "Samsung",
+        handler: () => props.actionProvider.handler(playStoreHandler),
         id: 2,
         },
 
-      { text: "Huawei", 
-        handler: props.actionProvider.handler(appGalleryHandler), 
+      { text: "Huawei",
+        handler: () => props.actionProvider.handler(appGalleryHandler),
         id: 3,
         },
 
-      { text: "Xiaomi", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+      { text: "Xiaomi",
+        handler: () => props.actionProvider.handler(playStoreHandler),
         id: 4,
         },
 
-      { text: "Oppo", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+      { text: "Oppo",
+        handler: () => props.actionProvider.handler(playStoreHandler),
         id: 5,
         },
 
-      { text: "Others", 
-      handler: props.actionProvider.handler(playStoreHandler), 
+      { text: "Others",
+      handler: () => props.actionProvider.handler(playStoreHandler),
       id: 6,
       },
-
-
-        
     ];
 
     const optionsMarkup = options.map((option) => (
@@ -71,8 +100,8 @@ const Phone = (props) => {
           {option.text}
         </button>
       ));
-    
+
       return <div className="learning-options-container">{optionsMarkup}</div>;
     };
-    
+
     export default Phone;

@@ -154,7 +154,7 @@ var waStartVideoHandler = [
   { message: "2. Look for the Video icon at the top right in Whatsapp." },
 ]
 
-var scanQrHandler = [   
+var scanQrHandler = [
   { message: "1. Open the QR Code reader on your phone." },
   { message: "2. Hold your device over a QR Code so that it's clearly visible within your smartphone's screen. Two things can happen when you correctly hold your smartphone over a QR Code.  *The phone automatically scans the code.  * On some readers, you have to press a button to snap a picture, not unlike the button on your smartphone camera." },
   { message: "3. If necessary, press the button." },
@@ -353,16 +353,16 @@ class MessageParser {
       this.actionProvider = actionProvider;
       this.state=state;
     }
-    
+
     parse(message) {
       /*  console.log(message) */
-        
+
       const lowerCaseMessage = message.toLowerCase()
 
       if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && !lowerCaseMessage.includes("history")) {
         this.actionProvider.handler(helloWorldHandler);
         }
-      
+
       else if(lowerCaseMessage.includes("how") || lowerCaseMessage.includes("steps") || lowerCaseMessage.includes("step")){
 
 /////////////////////// tng /////////////////////////
@@ -383,7 +383,7 @@ class MessageParser {
               this.actionProvider.handler(tngTransferHandler);
               }
             }
-            
+
           else if (lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up") || (lowerCaseMessage.includes("create") && lowerCaseMessage.includes("account")) ){
           this.actionProvider.handler(tngSignupHandler);
           }
@@ -399,7 +399,7 @@ class MessageParser {
         }
 
         //////////////// app /////////////////
-        
+
 
         else if (lowerCaseMessage.includes("delete") || lowerCaseMessage.includes("remove") || lowerCaseMessage.includes("uninstall")){ //need to exclude "chrome/history"
           if (lowerCaseMessage.includes("apple")) {
@@ -485,7 +485,7 @@ class MessageParser {
             this.actionProvider.handler(appErrorHandler);
           }
         }
-        
+
         else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) { //includes the word "app"
           this.actionProvider.phoneHandler();
         }
@@ -564,7 +564,7 @@ class MessageParser {
           else if (lowerCaseMessage.includes("receive")){
             this.actionProvider.handler(grabReceiveHandler);
           }
-          
+
           else if (lowerCaseMessage.includes("order") || lowerCaseMessage.includes("food")){
             this.actionProvider.handler(grabOrderHandler);
           }
@@ -606,7 +606,7 @@ class MessageParser {
           // this.actionProvider.whatsappKnowledge();
           this.actionProvider.handler(whatsappKnowledge);
         }
-  
+
       /////////////////////////tng////////////////////////////
 
         else if (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("apps") || lowerCaseMessage.includes("applications")){
@@ -658,7 +658,7 @@ class MessageParser {
           else if (lowerCaseMessage.includes("food")){
             this.actionProvider.handler(grabFoodKnowledge);
           }
-          
+
           else if (lowerCaseMessage.includes("transfer")){
             this.actionProvider.handler(grabTransferKnowledge);
           }
@@ -683,7 +683,7 @@ class MessageParser {
   ////////////////////////////////////////////////////////////////
         else {
           this.actionProvider.handler(errorHandler);
-        }      
+        }
       } //what
 
       else {
@@ -692,8 +692,8 @@ class MessageParser {
 
     } //parse
   }
-    
-    
+
+
     export default MessageParser;
 
   //  new MessageParser(actionProvider,state)
