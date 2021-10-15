@@ -28,8 +28,8 @@ var appGalleryHandler = [
 
 const Phone = (props) => {
     const options = [
-      { text: "Apple", 
-        handler: () => props.actionProvider.handler(appStoreHandler), 
+      { text: "Apple",
+        handler: () => props.actionProvider.handler(appStoreHandler),
         id: 1,
         },
 
@@ -57,9 +57,6 @@ const Phone = (props) => {
       handler: () => props.actionProvider.handler(playStoreHandler), 
       id: 6,
       },
-
-
-        
     ];
 
     const optionsMarkup = options.map((option) => (
@@ -71,8 +68,8 @@ const Phone = (props) => {
           {option.text}
         </button>
       ));
-    
+
       return <div className="learning-options-container">{optionsMarkup}</div>;
     };
-    
+
     export default Phone;
