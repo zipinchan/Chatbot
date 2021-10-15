@@ -37,6 +37,14 @@ class ActionProvider {
       }
       // console.log(list);
     }
+
+    googleHandler = () => {
+      const message = this.createChatBotMessage("Do you want to search Google for more answers?" , 
+      {
+        widget:"google"
+      })
+      this.setChatbotMessage(message);
+    } 
     
     // appStoreHandler = () => {
     //   const message = this.createChatBotMessage("1. Launch the App Store.")

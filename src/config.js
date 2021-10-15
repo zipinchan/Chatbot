@@ -4,6 +4,7 @@ import BotAvatar from "./components/BotAvatar/BotAvatar";
 import Todos from "./components/Todos/Todos";
 import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
+import Google from './components/Widgets/Google';
 
 /* import LearningOptions from "./LearningOptions";
 import LinkList from "./LinkList"; */
@@ -52,6 +53,10 @@ const config = {
       {
         widgetName: "safetyTips",
         widgetFunc: (props) => <Safety {...props} />,
+      },
+      {
+        widgetName: "google",
+        widgetFunc: (props) => <Google {...props} />,
       }
     ]
 

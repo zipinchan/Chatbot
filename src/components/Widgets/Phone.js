@@ -2,7 +2,7 @@ import React from 'react';
 import "./Phone.css";
 
 var appStoreHandler = [
-  { message: '1. Launch the App Store.\n\nhi' },
+  { message: '1. Launch the App Store.' },
   { message: '2. Tap the magnifying glass on the bottom right of your screen.' },
   { message: '3. Type in your search query and tap the search button.' },
   { message: '4. Tap the app or game you wish to purchase or download for free.' },
@@ -34,27 +34,27 @@ const Phone = (props) => {
         },
 
       { text: "Samsung", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+        handler: () => props.actionProvider.handler(playStoreHandler), 
         id: 2,
         },
 
       { text: "Huawei", 
-        handler: props.actionProvider.handler(appGalleryHandler), 
+        handler: () => props.actionProvider.handler(appGalleryHandler), 
         id: 3,
         },
 
       { text: "Xiaomi", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+        handler: () => props.actionProvider.handler(playStoreHandler), 
         id: 4,
         },
 
       { text: "Oppo", 
-        handler: props.actionProvider.handler(playStoreHandler), 
+        handler: () => props.actionProvider.handler(playStoreHandler), 
         id: 5,
         },
 
       { text: "Others", 
-      handler: props.actionProvider.handler(playStoreHandler), 
+      handler: () => props.actionProvider.handler(playStoreHandler), 
       id: 6,
       },
 

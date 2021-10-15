@@ -8,6 +8,8 @@
 
 //The final piece of the puzzle is the actionprovider. We'll take a look at that next. It will handle bot actions. It will come as no surprise then, that the actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
 
+
+
 var whatsappKnowledge = [
   { message: "WhatsApp uses your phone’s cellular or Wi-Fi connection to facilitate messaging and voice calling to nearly anyone on the planet, alone or in a group and is especially nice for families and small collaborative workgroups. The app lets you make calls, send and receive messages, and share documents, photos, and videos." }
 ];
@@ -48,6 +50,7 @@ var tngSignupHandler = [
 
 var errorHandler = [
   { message: "Sorry, I don't have an answer for that." },
+  { message: "Do you want to search Google for more answers?"},
 ];
 
 var browseIntHandler = [
@@ -72,7 +75,7 @@ var deleteAndroidHandler = [
 ];
 
 var appErrorHandler = [
-  { message: "Please specific if you are using an Apple or Android phone." }
+  { message: "Please specify if you are using an Apple or Android phone." }
 ]
 
 var dataAppleHandler = [
@@ -361,6 +364,7 @@ class MessageParser {
 
       if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && !lowerCaseMessage.includes("history")) {
         this.actionProvider.handler(helloWorldHandler);
+        //window.open("https://towardsdatascience.com/build-a-simple-chatbot-with-python-and-google-search-c000aa3f73f0");
         }
       
       else if(lowerCaseMessage.includes("how") || lowerCaseMessage.includes("steps") || lowerCaseMessage.includes("step")){
@@ -401,7 +405,7 @@ class MessageParser {
         //////////////// app /////////////////
         
 
-        else if (lowerCaseMessage.includes("delete") || lowerCaseMessage.includes("remove") || lowerCaseMessage.includes("uninstall")){ //need to exclude "chrome/history"
+        else if ((lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("applications")) && (lowerCaseMessage.includes("delete") || lowerCaseMessage.includes("remove") || lowerCaseMessage.includes("uninstall"))){ //need to exclude "chrome/history"
           if (lowerCaseMessage.includes("apple")) {
             this.actionProvider.handler(deleteAppleHandler);
         }
@@ -486,7 +490,7 @@ class MessageParser {
           }
         }
         
-        else if ((lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application"))) { //includes the word "app"
+        else if ((lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application")) && (lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install"))) { //includes the word "app"
           this.actionProvider.phoneHandler();
         }
 
@@ -504,7 +508,7 @@ class MessageParser {
           this.actionProvider.handler(waStartChatHandler);
         }
 
-        else if (lowerCaseMessage.includes("video") || lowerCaseMessage.includes("call")){ //whatsapp call not video
+        else if (lowerCaseMessage.includes("video") && lowerCaseMessage.includes("call")){ //whatsapp call not video
           this.actionProvider.handler(waStartVideoHandler);
         }
 
@@ -580,13 +584,17 @@ class MessageParser {
           else {
             this.actionProvider.handler(errorHandler);
           }
-        }
+        } ///grab
 
         //////////////////////////////////////////////
 
         else {
           this.actionProvider.handler(errorHandler);
+          //this.actionProvider.googleHandler();
+          //<button onClick={window.open(lowerCaseMessage)}>  </button>
+          //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }
+          
       } //first if
 ////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
       else if (lowerCaseMessage.includes("what")) {
@@ -594,7 +602,7 @@ class MessageParser {
           this.actionProvider.handler(qrKnowledge);
         }
 
-        else if (lowerCaseMessage.includes("google")) {
+        else if (lowerCaseMessage.includes("google") && !lowerCaseMessage.includes("store")) {
           this.actionProvider.handler(gooKnowledge);
         }
 
@@ -609,7 +617,7 @@ class MessageParser {
   
       /////////////////////////tng////////////////////////////
 
-        else if (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("apps") || lowerCaseMessage.includes("applications")){
+        else if ((lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("apps") || lowerCaseMessage.includes("applications")) && !lowerCaseMessage.includes("store")) {
           this.actionProvider.handler(appKnowledge);
         }
 
@@ -625,7 +633,7 @@ class MessageParser {
           this.actionProvider.handler(mobileDataKnowledge);
         }
 
-        else if (lowerCaseMessage.includes("appstore") || lowerCaseMessage.includes("app store")) { //includes the word "app"
+        else if (lowerCaseMessage.includes("store") && (lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application") || lowerCaseMessage.includes("apps") || lowerCaseMessage.includes("applications"))) { //includes the word "app"
           this.actionProvider.handler(appStoreKnowledge);
         }
 
@@ -683,7 +691,9 @@ class MessageParser {
   ////////////////////////////////////////////////////////////////
         else {
           this.actionProvider.handler(errorHandler);
-        }      
+        }
+        
+        
       } //what
 
       else {
