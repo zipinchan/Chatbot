@@ -334,10 +334,10 @@ class ActionProvider {
 
     ////////////////////////////////////////
 
-    qrSafetyKnowledge = () => {
+    /* qrSafetyKnowledge = () => {
       const message = this.createChatBotMessage("Only scan codes that come from a trusted sender. Hackers can create malicious QR codes which send users to fake websites that capture their personal data such as login credentials or even track their geolocation on their phone")
       this.setChatbotMessage(message);
-    }
+    } */
 
     // whatsappKnowledge = () => {
     //   const message = this.createChatBotMessage("WhatsApp uses your phone’s cellular or Wi-Fi connection to facilitate messaging and voice calling to nearly anyone on the planet, alone or in a group and is especially nice for families and small collaborative workgroups. The app lets you make calls, send and receive messages, and share documents, photos, and videos.")
@@ -392,15 +392,15 @@ class ActionProvider {
     //   this.setChatbotMessage(message);
     // }
 
-    grabPayUseKnowledge = () => {
-      const message = this.createChatBotMessage("GrabPay can be used at rides, in-store purchase, grabfood, credits transfer, and prepaid top up. ")
+  /* grabPayUseKnowledge = () => {
+      const message = this.createChatBotMessage(" ")
       this.setChatbotMessage(message);
-    }
+    } */
 
-    grabSafetyKnowledge = () => {
+   /* grabSafetyKnowledge = () => {
       const message = this.createChatBotMessage("You can set up a Grab PIN that is hard to guess. You should also keep your PIN secret without sharing with others. Contact Grab customer support when you think someone has gained unauthorized access to your Grab app. ")
       this.setChatbotMessage(message);
-    }
+    } */
 
 
     // grabMartKnowledge = () => {

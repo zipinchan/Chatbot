@@ -5,7 +5,7 @@ const Google = (props) => {
     const options = [
         {
             name:"Search Google",
-           // handler: () => props.actionProvider.handler(googleHandler), 
+           handler: () => props.actionProvider.handler(googleHandler), 
             id: 1,
         }
     ];

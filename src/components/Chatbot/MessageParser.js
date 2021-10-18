@@ -272,6 +272,10 @@ var qrKnowledge  = [
   { message: "Short for Quick Response, QR codes are a type of barcode easily readable with digital devices like smartphones. They store information as a series of pixels in a square grid that can be read in two directions — top to bottom and right to left — unlike standard barcodes that can only be read top to bottom." },
 ]
 
+var qrSafetyKnowledge = [
+  { message: "Only scan codes that come from a trusted sender. Hackers can create malicious QR codes which send users to fake websites that capture their personal data such as login credentials or even track their geolocation on their phone."}
+]
+
 var gooKnowledge = [
   { message: "Google is a search engine that enables users to locate information on the web." },
 ]
@@ -321,6 +325,10 @@ var bluetoothKnowledge = [
 
 var locationKnowledge = [
   { message: "Location Services uses GPS and Bluetooth (where they're available), along with crowd-sourced Wi-Fi hotspots and cellular towers to determine the approximate location of your device." },
+]
+
+var grabPayUseKnowledge = [
+  { message: "GrabPay can be used at rides, in-store purchase, grabfood, credits transfer, and prepaid top up."}
 ]
 
 var grabPayKnowledge = [
@@ -523,6 +531,10 @@ class MessageParser {
           this.actionProvider.handler(scanQrHandler);
         }
 
+        else if (lowerCaseMessage.includes("qr") && (lowerCaseMessage.includes("safety") || lowerCaseMessage.includes("safe"))) {
+          this.actionProvider.handler(qrSafetyKnowledge);
+        }
+
         else if (lowerCaseMessage.includes("account") && (lowerCaseMessage.includes("create") || lowerCaseMessage.includes("signup") || lowerCaseMessage.includes("sign up")) && lowerCaseMessage.includes("google")){
             this.actionProvider.handler(gooAccHandler);
         }
@@ -581,6 +593,10 @@ class MessageParser {
             this.actionProvider.handler(grabMartHandler);
           }
 
+          else if (lowerCaseMessage.includes("safety") || lowerCaseMessage.includes("safe")){
+            this.actionProvider.handler(grabSafetyKnowledge);
+          }
+
           else {
             this.actionProvider.handler(errorHandler);
           }
@@ -600,6 +616,10 @@ class MessageParser {
       else if (lowerCaseMessage.includes("what")) {
         if (lowerCaseMessage.includes("qr")) {
           this.actionProvider.handler(qrKnowledge);
+        }
+
+        else if (lowerCaseMessage.includes("qr") && (lowerCaseMessage.includes("safety") || lowerCaseMessage.includes("safe"))) {
+          this.actionProvider.handler(qrSafetyKnowledge);
         }
 
         else if (lowerCaseMessage.includes("google") && !lowerCaseMessage.includes("store")) {
@@ -663,6 +683,10 @@ class MessageParser {
             this.actionProvider.handler(grabPayKnowledge);
           }
 
+          else if (lowerCaseMessage.includes("use") && (lowerCaseMessage.includes("pay") || lowerCaseMessage.includes("wallet") )){
+            this.actionProvider.handler(grabPayUseKnowledge);
+          }
+
           else if (lowerCaseMessage.includes("food")){
             this.actionProvider.handler(grabFoodKnowledge);
           }
@@ -673,6 +697,10 @@ class MessageParser {
 
           else if (lowerCaseMessage.includes("mart")){
             this.actionProvider.handler(grabMartKnowledge);
+          }
+
+          else if (lowerCaseMessage.includes("safety") || lowerCaseMessage.includes("safe")){
+            this.actionProvider.handler(grabSafetyKnowledge);
           }
 
           else {
