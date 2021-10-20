@@ -5,9 +5,12 @@ import Todos from "./components/Todos/Todos";
 import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
 import Google from './components/Widgets/Google';
+import "./config.css";
 
 /* import LearningOptions from "./LearningOptions";
 import LinkList from "./LinkList"; */
+
+
 
 const config = {
   initialMessages: [

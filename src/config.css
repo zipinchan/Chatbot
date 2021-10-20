@@ -1,0 +1,28 @@
+.react-chatbot-kit-chat-container {
+    width: 600px;
+    height: 600px;
+  }
+
+  .react-chatbot-kit-chat-bot-message {
+    margin-left: 5px;
+    font-size: 18px;
+    width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .react-chatbot-kit-user-chat-message {
+      font-size: 18px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .react-chatbot-kit-chat-input {
+      font-size: 18px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .react-chatbot-kit-chat-input-form {
+      height: 100px;
+  }
+
+
+  

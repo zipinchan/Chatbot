@@ -185,21 +185,12 @@ h4.agile-title,h1.agile-title,h2.agile-title { /*hands-on*/
 }
 
 .csslider>ul>li:first-child {
-    background: url(../images/ban1.jpg) no-repeat center;
-    background-size: cover;
-}
-
-.csslider>ul>li:nth-child(2) {
-    background: url(../images/ban2.jpg) no-repeat center;
-    background-size: cover;
-}
-
-.csslider>ul>li:nth-child(3) {
-    background: url(../images/ban3.jpg) no-repeat center;
-    background-size: cover;
-}
-.csslider>ul>li:last-child {
     background: url(../images/ban4.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.csslider>ul>li:last-child {
+    background: url(../images/ban1.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -211,13 +202,16 @@ h4.agile-title,h1.agile-title,h2.agile-title { /*hands-on*/
     display: none;
 }
 
+/*
 .csslider>input:nth-of-type(3):checked~ul li:first-of-type {
     margin-left: -200%;
 }
-
 .csslider>input:nth-of-type(4):checked~ul li:first-of-type {
     margin-left: -300%;
 }
+*/
+
+
 
 .csslider>input:nth-of-type(2):checked~ul li:first-of-type {
     margin-left: -100%;
@@ -320,9 +314,9 @@ h4.agile-title,h1.agile-title,h2.agile-title { /*hands-on*/
 }
 
 .csslider>input:nth-of-type(1):checked~.navigation label:nth-of-type(1):after,
-.csslider>input:nth-of-type(2):checked~.navigation label:nth-of-type(2):after,
-.csslider>input:nth-of-type(3):checked~.navigation label:nth-of-type(3):after,
-.csslider>input:nth-of-type(4):checked~.navigation label:nth-of-type(4):after {
+.csslider>input:nth-of-type(2):checked~.navigation label:nth-of-type(2):after
+/* .csslider>input:nth-of-type(3):checked~.navigation label:nth-of-type(3):after,
+.csslider>input:nth-of-type(4):checked~.navigation label:nth-of-type(4):after */ {
     opacity: 1;
 }
 
@@ -465,12 +459,13 @@ nav a,nav a:hover {
     background: transparent;
 }
 
+
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
-nav ul ul {
+/* nav ul ul {
 	display: none;
 	position: absolute; 
-	/* has to be the same number as the "line-height" of "nav a" */
+	/* has to be the same number as the "line-height" of "nav a" 
 	top: 25px; 
     background: #fff;
     padding: 10px;
@@ -478,6 +473,8 @@ nav ul ul {
 ul.inner-dropdown a:hover {
 	color: #333;
 }
+
+*/
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
 	display:inherit;
@@ -675,7 +672,7 @@ h3.heading {
 .breadcrumb-item {
     letter-spacing: 2px;
 }
-/*-- inner page banner --*/
+/*-- inner page banner --
 .inner-page-banner {
     background: url(../images/ban1.jpg) no-repeat;
     background-size: cover;
@@ -721,8 +718,8 @@ li.breadcrumb-item a {
 /*button*/
 
 .app-chatbot-button {
-    width: 170px;
-    height: 170px;
+    width: 100px;
+    height: 100px;
     border-radius: 30px;
     padding: 10px;
     color: #fff;
@@ -740,7 +737,7 @@ li.breadcrumb-item a {
   }
 
   .app-chatbot-container {
-    margin: 200px 0;
+    margin: 100px 0; 
     display: flex;
     justify-content: center;
     position: fixed;
@@ -775,7 +772,7 @@ li.breadcrumb-item a {
 /*-- //about page-mid --*/
 
 
-/* gallery page */
+/* gallery page 
 .gallery {
     position: relative;
 }
@@ -785,7 +782,7 @@ li.breadcrumb-item a {
     width: 100%;
 }
 
-/* popup */
+/* popup 
 .popup-effect {
     position: fixed;
     top: 0;
@@ -833,7 +830,7 @@ li.breadcrumb-item a {
 
 
 
-/*-- /single-page --*/
+/*-- /single-page --
 .content-sing-w3ls h4 {
     color: #555;
     font-size: 1.4em;
@@ -865,12 +862,12 @@ h4.leave-w3ls {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
 }
-/* social icons */
+/* social icons 
 .w3ls_social_list li {
     display: inline-block;
 }
 
-.w3ls_social_list li a {
+/*.w3ls_social_list li a {
     width: 34px;
     height: 34px;
     text-align: center;
@@ -884,9 +881,7 @@ h4.leave-w3ls {
     line-height: 34px;
 }
 
-a.w3pvt_google {
-    background: #F44336;
-}
+
 
 /* //social-icons */
 
@@ -985,9 +980,9 @@ hr {
 
 /* footer grids */
 
-ul.list-info-w3pvt {
+/* ul.list-info-w3pvt {
     list-style: none;
-}
+} 
 
 h4.footer-title {
     color: #777;
@@ -999,7 +994,7 @@ h4.footer-title {
     color: #a3b1bf;
     margin: 1em 0;
     line-height: 1.5em;
-}
+}*/
 
 .footer p a {
     color: #fff;
@@ -1020,10 +1015,7 @@ h4.footer-title {
     color: #fff;
 }
 
-.last-w3ls-contact p a:hover {
-    color: #15b915;
-}
-
+/*
 .list-info-w3pvt li a {
     color: #fff;
     font-size: 0.85em;
@@ -1032,7 +1024,7 @@ h4.footer-title {
 
 .list-info-w3pvt li a:hover {
     opacity: 0.8;
-}
+} */
 
 h3.w3pvt_title {
     font-size: 1.2em;
@@ -1046,11 +1038,16 @@ h3.w3pvt_title {
     color: #fff;
 }
 
+.last-w3ls-contact p a:hover {
+    color: #15b915;
+}
+
 .w3ls-icons li {
     display: inline-block;
     margin: 0 1em;
 }
 
+/*
 .w3ls-icons li a span {
     color: #fff;
 }
@@ -1058,10 +1055,11 @@ h3.w3pvt_title {
 .w3ls-icons li a span:hover {
     color: #ffc80a;
 }
+ */
 
 /* //footer */
 
-/* copyright */
+/* copyright 
 
 p.copy-right-grids {
     letter-spacing: 2px;
@@ -1072,7 +1070,7 @@ p.copy-right-grids a {
     color: #fff;
 }
 
-/* //copyright */
+ //copyright */
 
 a.move-top {
     text-align: center;
