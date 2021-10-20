@@ -296,11 +296,11 @@ var safetyHandler = [
 ]
 
 var simKnowledge = [
-  { message: "SIM cards are small cards that contain a chip that holds a unique identification number, phone number and other data that links to the consumer" },
+  { message: "SIM cards are small cards that contain a chip that holds a unique identification number, phone number and other data that links to the consumer" }
 ]
 
 var mobileDataKnowledge = [
-  { message: "Mobile data is what allows your phone to get online when you're away from WiFi" },
+  { message: "Mobile data is what allows your phone to get online when you're away from WiFi" }
 ]
 
 var appStoreKnowledge = [
@@ -308,7 +308,7 @@ var appStoreKnowledge = [
 ]
 
 var playStoreKnowledge = [
-  { message: "It allows users to browse and download applications developed with the Android software development kit (SDK) and published through Google." },
+  { message: "It allows users to browse and download applications developed with the Android software development kit (SDK) and published through Google." }
 ]
 
 var airplaneKnowledge = [
@@ -336,11 +336,11 @@ var grabPayKnowledge = [
 ]
 
 var grabFoodKnowledge = [
-  { message: "GrabFood is Southeast Asia’s fastest growing food delivery service, serving customers delightful meals from street food to restaurant dining." },
+  { message: "GrabFood is Southeast Asia’s fastest growing food delivery service, serving customers delightful meals from street food to restaurant dining." }
 ]
 
 var grabTransferKnowledge = [
-  { message: "Grab transfer is a method for you to transfer funds between your contacts in the Grab app, using your Grab wallet." },
+  { message: "Grab transfer is a method for you to transfer funds between your contacts in the Grab app, using your Grab wallet." }
 ]
 
 var grabMartKnowledge = [
@@ -351,12 +351,16 @@ var grabKnowledge = [
   { message: "Grab is an easy to use on-demand car and taxi service that you can use to hail licensed taxis or business driving services in Malaysia, Philippines, India, Thailand, Singapore, Vietnam, and Indonesia." },
 ]
 
+var grabSafetyKnowledge = [
+  { message: " You can set up a Grab PIN that is hard to guess. You should also keep your PIN secret without sharing with others. Contact Grab customer support when you think someone has gained unauthorized access to your Grab app. "}
+]
+
 var tngKnowledge = [
   { message: "Touch 'n Go eWallet is a Malaysian digital wallet and online payment platform, established in Kuala Lumpur, Malaysia, in July 2017 as a joint venture between Touch 'n Go and Ant Financial. It allows users to make payments at over 280,000 merchant touch points via QR code; pay for tolls, street parking, payment on e-hailing, car-sharing apps or taxis via RFID or PayDirect; pay bills; top-up mobile prepaid; pay for purchases on e-commerce websites or apps; order food delivery; perform peer-to-peer money transfers; renew car insurance and purchase unique insurance plans; and purchase movie, bus, trains, and airline tickets." },
 ]
 
 var error2Handler = [
-  { message: "Please start your sentence with what or how" },
+  { message: "Please start your sentence with what or how" }
 ]
 
 class MessageParser {
@@ -606,7 +610,8 @@ class MessageParser {
 
         else {
           this.actionProvider.handler(errorHandler);
-          //this.actionProvider.googleHandler();
+          this.actionProvider.googleHandler();
+          const thismessage = lowerCaseMessage;
           //<button onClick={window.open(lowerCaseMessage)}>  </button>
           //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }
@@ -732,6 +737,6 @@ class MessageParser {
   }
 
 
-    export default MessageParser;
+    export default  MessageParser;
 
   //  new MessageParser(actionProvider,state)
