@@ -5,6 +5,7 @@ import Todos from "./components/Todos/Todos";
 import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
 import Google from './components/Widgets/Google';
+import Microphone from './Microphone';
 import "./config.css";
 
 /* import LearningOptions from "./LearningOptions";
@@ -18,6 +19,9 @@ const config = {
     createChatBotMessage("or",),
     createChatBotMessage("Click here for some safety tips", {
       widget:"safetyTips"
+    }),
+    createChatBotMessage("Click for voice", {
+      widget:"microphone"
     })
     ],
 
@@ -60,6 +64,13 @@ const config = {
       {
         widgetName: "google",
         widgetFunc: (props) => <Google {...props} />,
+        mapStateToProps: [
+          "lowerCaseMessage"
+        ],
+      },
+      {
+        widgetName: "microphone",
+        widgetFunc: (props) => <Microphone {...props} />,
       }
     ]
 

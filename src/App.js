@@ -11,7 +11,6 @@ import About from './components/About';
 import Registration from './components/Registration';
 import Feedback from './components/Feedback';
 
-
 function App() {
 
   const [showBot, toggleBot] = useState(false);

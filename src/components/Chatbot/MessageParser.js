@@ -48,10 +48,6 @@ var tngSignupHandler = [
   { message: "5. Enter your personal details and you're done." },
 ];
 
-var errorHandler = [
-  { message: "Sorry, I don't have an answer for that." },
-  { message: "Do you want to search Google for more answers?"},
-];
 
 var browseIntHandler = [
   { message: "1. Go into your web browser (eg. Google Chrome, Safari (iPhone), Firefox)" },
@@ -74,9 +70,6 @@ var deleteAndroidHandler = [
   { message: "3. Click ‘Uninstall’ to delete / uninstall the App" }
 ];
 
-var appErrorHandler = [
-  { message: "Please specify if you are using an Apple or Android phone." }
-]
 
 var dataAppleHandler = [
   { message: "1. Go to settings app." },
@@ -359,18 +352,50 @@ var tngKnowledge = [
   { message: "Touch 'n Go eWallet is a Malaysian digital wallet and online payment platform, established in Kuala Lumpur, Malaysia, in July 2017 as a joint venture between Touch 'n Go and Ant Financial. It allows users to make payments at over 280,000 merchant touch points via QR code; pay for tolls, street parking, payment on e-hailing, car-sharing apps or taxis via RFID or PayDirect; pay bills; top-up mobile prepaid; pay for purchases on e-commerce websites or apps; order food delivery; perform peer-to-peer money transfers; renew car insurance and purchase unique insurance plans; and purchase movie, bus, trains, and airline tickets." },
 ]
 
+var appErrorHandler = [
+  { message: "Please specify if you are using an Apple or Android phone." }
+]
+
+var errorHandler = [
+  { message: "Sorry, I don't have an answer for that." },
+  { message: "Do you want to search Google for more answers?"},
+]
+
 var error2Handler = [
   { message: "Please start your sentence with what or how" }
 ]
+
+// const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 class MessageParser {
     constructor(actionProvider,state) {
       this.actionProvider = actionProvider;
       this.state=state;
+
+      // this.recognition = new SpeechRecognition()
+      //   this.recognition.continous = true
+      //   this.recognition.interimResults = false
+      //   this.recognition.lang = 'en-US'
+      //   this.recognition.maxAlternatives = 1;
+
+      //   this.recognition.start()
+      //   this.recognition.onresult = (e) => {
+      //       if  (e.results[0].isFinal) {
+      //           const transcript = e.results[0][0].transcript;
+      //           this.recognition.abort()
+      //           this.parse(transcript)
+      //       }
+        
+
     }
 
     parse(message) {
-      /*  console.log(message) */
+    //console.log(message) 
+    //   setTimeout(() => {
+    //   this.recognition.start();
+    // }, 1000) //1 sec 
+
+   // this.actionProvider.userMessage();
 
       const lowerCaseMessage = message.toLowerCase()
 
@@ -609,9 +634,13 @@ class MessageParser {
         //////////////////////////////////////////////
 
         else {
+      
+         var searchHandler = (lowerCaseMessage) => {
+            window.open('https://www.google.com/search?q=' + lowerCaseMessage);
+          }
+
           this.actionProvider.handler(errorHandler);
-          this.actionProvider.googleHandler();
-          const thismessage = lowerCaseMessage;
+          searchHandler(lowerCaseMessage);
           //<button onClick={window.open(lowerCaseMessage)}>  </button>
           //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }
