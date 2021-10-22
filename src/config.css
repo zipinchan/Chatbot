@@ -1,12 +1,22 @@
-.react-chatbot-kit-chat-container {
-    width: 600px;
-    height: 600px;
+/* .app-chatbot-container {
+    width: 70%;
+    height: 70%;
+  } */
+
+  .app-chatbot-container {
+    width: 50%;
   }
+ 
+ .react-chatbot-kit-chat-container {
+      width: 100%;
+    } 
+
+
 
   .react-chatbot-kit-chat-bot-message {
     margin-left: 5px;
+    width: fit-content;
     font-size: 18px;
-    width: 500px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
@@ -21,7 +31,7 @@
   }
 
   .react-chatbot-kit-chat-input-form {
-      height: 100px;
+      height: 10%;
   }
 
 
