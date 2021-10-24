@@ -1,5 +1,7 @@
 //The message parser controls what happens when the user sends a message.
 
+import React from "react";
+
 //import { isCompositeComponent } from "react-dom/test-utils";
 
 //You have to implement this yourself. The beauty of this is that you can make the message parsing as complex or as simple as you'd like.
@@ -366,11 +368,14 @@ var error2Handler = [
 ]
 
 // const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-
+ 
 class MessageParser {
-    constructor(actionProvider,state) {
+    constructor(actionProvider) {
       this.actionProvider = actionProvider;
-      this.state=state;
+      this.state = 
+      {
+        userInput: "hi"
+      };
 
       // this.recognition = new SpeechRecognition()
       //   this.recognition.continous = true
@@ -387,7 +392,9 @@ class MessageParser {
       //       }
         
 
-    }
+    } // constructor end
+
+    
 
     parse(message) {
     //console.log(message) 
@@ -639,8 +646,22 @@ class MessageParser {
             window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }
 
+      //  const handleClick = () => {
+      //   this.setState = () => ({
+      //     userInput: "lowerCaseMessage"
+      //   }, () => { console.log("hi")}
+      //   )
+      //  };
+
           this.actionProvider.handler(errorHandler);
-          searchHandler(lowerCaseMessage);
+          this.setState = () => ({
+            userInput: "lowerCaseMessage"
+          }, () => { console.log(this.state.userInput)}
+          )
+          this.setState();
+          // console.log(this.state.userInput);
+          //searchHandler(lowerCaseMessage);
+
           //<button onClick={window.open(lowerCaseMessage)}>  </button>
           //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }

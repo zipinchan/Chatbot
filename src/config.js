@@ -42,7 +42,8 @@ const config = {
     },
     
     state:{
-      todos:[]
+      todos:[],
+      userInput: 'hi',
     },
 
    

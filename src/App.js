@@ -36,7 +36,7 @@ function App() {
       {showBot && (
 
         <div className="app-chatbot-container">
-        <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} />
+        <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser}  />
        </div> 
 
         )}
