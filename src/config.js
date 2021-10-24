@@ -27,7 +27,12 @@ const config = {
 
     botName:"NerdyBot",
     customComponents: {
-      botAvatar:(props) =>  <BotAvatar {...props} /> 
+      botAvatar:(props) =>  <BotAvatar {...props} /> ,
+      header: () => <div style ={{ 
+        backgroundColor: "#043469", 
+        padding: "10px", 
+        color:"#90B860", 
+      }}> Talk to NerdyBot! </div>
     },
     
     customStyles: {

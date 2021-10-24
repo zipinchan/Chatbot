@@ -7,13 +7,25 @@
     width: 50%;
   }
  
- .react-chatbot-kit-chat-container {
-      width: 100%;
-    } 
+  .react-chatbot-kit-chat-container {
+        width: 100%;
+      } 
 
+  .react-chatbot-kit-chat-message-container {
+    background-color:#58D28E;
+  }
 
+  .react-chatbot-kit-chat-btn-send {
+    background-color:rgb(4,52,105) !important;
+  }
+
+  .react-chatbot-kit-chat-inner-container {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
 
   .react-chatbot-kit-chat-bot-message {
+    background-color: rgb(4,52,105) !important;
     margin-left: 5px;
     width: fit-content;
     font-size: 18px;

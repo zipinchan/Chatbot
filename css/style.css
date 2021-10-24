@@ -402,11 +402,12 @@ h4.agile-title,h1.agile-title,h2.agile-title {
 /* header */
 /* CSS Document */
 header {
+    /*remove background */
     position: absolute;
     z-index: 9;
     width: 100%;
     padding: 1rem 0;
-	background-color:#111;
+	
 }
 
 .toggle,
@@ -460,13 +461,16 @@ nav a,nav a:hover {
 
 /* Background color change on Hover */
 .menu li.active  a{ 
-    color: #eee;
+    color: #27C667;
     background: transparent;
 }
 
+
+/*---------------------------------------------------------*/
+
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
-nav ul ul {
+ nav ul ul {
 	display: none;
 	position: absolute; 
 	/* has to be the same number as the "line-height" of "nav a" */
@@ -504,9 +508,9 @@ nav ul ul ul li {
 	top:-60px;
 	/* has to be the same number as the "width" of "nav ul ul li" */ 
 	left:170px; 
-}
+} 
+/*---------------------------------------------------------*/
 
-	
 /* Change ' +' in order to change the Dropdown symbol */
 li > a:only-child:after { content: ''; }
 
