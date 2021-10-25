@@ -1,15 +1,30 @@
+// import React from "react";
+
+// import Link from "./Link";
+
+// const GoogleLink = () => {
+//   const getUrl = () => {
+//     return `https://www.google.com/search?q=${userInput}`;
+//   };
+
+//   return (
+//     <Link url={getUrl()} title={"search on Google"} />
+//   );
+// };
+
 import React from "react";
 
 import Link from "./Link";
 
-const GoogleLink = () => {
+const GoogleLink = ({userInput}) => {
   const getUrl = () => {
-    return `https://www.hpb.health.gov.lk/en/covid-19#:~:text=Delivery%20of%20medicine%20from%20hospital%20clinics`;
+    return `https://www.google.com/search?q=${userInput}`;
+   
   };
 
-  return (
-    <Link url={getUrl()} title={"search on Google"} />
-  );
+  return <Link url={getUrl()} title={"book parking on Avinor.no"} />;
 };
+
+
 
 export default GoogleLink;

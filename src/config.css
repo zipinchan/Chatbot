@@ -8,11 +8,13 @@
   }
  
   .react-chatbot-kit-chat-container {
-        width: 100%;
-      } 
+    width: 100%;
+    border-radius: 25px;
+
+  }
 
   .react-chatbot-kit-chat-message-container {
-    background-color:#58D28E;
+    background-color:#58D28E; 
   }
 
   .react-chatbot-kit-chat-btn-send {

@@ -5,6 +5,7 @@ import Todos from "./components/Todos/Todos";
 import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
 import Google from './components/Widgets/Google';
+import GoogleSearch from './components/Widgets/googleSearch';
 import Microphone from './Microphone';
 import "./config.css";
 
@@ -48,7 +49,7 @@ const config = {
     
     state:{
       todos:[],
-      userInput: 'hi',
+      userInput: "",
     },
 
    
@@ -70,10 +71,13 @@ const config = {
       {
         widgetName: "google",
         widgetFunc: (props) => <Google {...props} />,
-        mapStateToProps: [
-          "lowerCaseMessage"
-        ],
       },
+      {
+        widgetName: "googleSearch",
+        widgetFunc: (props) => <GoogleSearch {...props} />,
+        mapStateToProps: ["userInput"],
+      },
+
       {
         widgetName: "microphone",
         widgetFunc: (props) => <Microphone {...props} />,

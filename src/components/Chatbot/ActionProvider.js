@@ -55,6 +55,30 @@ class ActionProvider {
       // console.log(list);
     }
 
+    googleSearch = () => {
+      const message = this.createChatBotMessage(
+        "Now opening google",
+        {
+          widget: "googleSearch",
+          loading: true,
+          terminateLoading: true,
+        }
+      )
+      this.setChatbotMessage(message);
+    }
+
+    searchHandler = () => {
+      const message =this.createChatBotMessage(
+        "search handler successfully",
+        {
+          widget: "google",
+          loading: true,
+          terminateLoading: true,
+        }
+      )
+      this.setChatbotMessage(message);
+    }
+
     // googleHandler = (lowerCaseMessage) => {
     //   const message = this.createChatBotMessage("Do you want to search Google for more answers?" , 
     //   {
@@ -75,7 +99,7 @@ class ActionProvider {
              id: 1
       }
 
-          return clientMessage
+          return clientMessage;
     } 
 
 

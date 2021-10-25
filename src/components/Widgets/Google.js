@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Phone.css";
-import "../Chatbot/MessageParser"
+import Options from "../Widgets/Options/Options";
 
 
 
@@ -8,10 +8,13 @@ const Google = (props) => {
     const options = [
         {
            text:"Search Google",
-           handler: props.actionProvider.searchHandler(), 
+           handler: props.actionProvider.googleSearch, 
            id: 1,
         }
     ];
+
+    
+    // return <Options options={options} title="Parking options" {...props} />;
 
     const optionsMarkup = options.map((option) => (
       <button
@@ -22,7 +25,7 @@ const Google = (props) => {
         {option.text}
       </button>
     ));
-  
+
     return <div className="learning-options-container">{optionsMarkup}</div>;
   };
     

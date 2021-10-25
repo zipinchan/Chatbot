@@ -1,7 +1,5 @@
 //The message parser controls what happens when the user sends a message.
 
-import React from "react";
-
 //import { isCompositeComponent } from "react-dom/test-utils";
 
 //You have to implement this yourself. The beauty of this is that you can make the message parsing as complex or as simple as you'd like.
@@ -642,9 +640,9 @@ class MessageParser {
 
         else {
       
-         var searchHandler = (lowerCaseMessage) => {
-            window.open('https://www.google.com/search?q=' + lowerCaseMessage);
-          }
+        //  var searchHandler = (lowerCaseMessage) => {
+        //     window.open('https://www.google.com/search?q=' + lowerCaseMessage);
+        //   }
 
       //  const handleClick = () => {
       //   this.setState = () => ({
@@ -654,11 +652,13 @@ class MessageParser {
       //  };
 
           this.actionProvider.handler(errorHandler);
-          this.setState = () => ({
-            userInput: "lowerCaseMessage"
-          }, () => { console.log(this.state.userInput)}
-          )
-          this.setState();
+          this.actionProvider.searchHandler();
+
+          // this.setState = () => ({
+          // userInput: "lowerCaseMessage"
+          // }, () => { console.log(this.state.userInput)}
+          // )
+          // this.setState();
           // console.log(this.state.userInput);
           //searchHandler(lowerCaseMessage);
 
