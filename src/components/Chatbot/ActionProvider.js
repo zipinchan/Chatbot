@@ -1,28 +1,26 @@
 //The actionprovider controls what kind of action that the chatbot is going to perform.
 //The actionprovider is given the createChatBotMessage and createClientMessage functions in the constructor, which you can use to create a new responses.
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+// const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
-      this.recognition = new SpeechRecognition()
-        this.recognition.continous = true
-        this.recognition.interimResults = false
-        this.recognition.lang = 'en-US'
-        this.recognition.maxAlternatives = 1;
+    //   this.recognition = new SpeechRecognition()
+    //     this.recognition.continous = true
+    //     this.recognition.interimResults = false
+    //     this.recognition.lang = 'en-US'
+    //     this.recognition.maxAlternatives = 1;
 
-        this.recognition.start()
-        this.recognition.onresult = (e) => {
-            if  (e.results[0].isFinal) {
-                const transcript = e.results[0][0].transcript;
-                this.recognition.abort()
-                // this.parse(transcript) 
-            }
-        
-
-    }
+    //     this.recognition.start()
+    //     this.recognition.onresult = (e) => {
+    //         if  (e.results[0].isFinal) {
+    //             const transcript = e.results[0][0].transcript;
+    //             this.recognition.abort()
+    //             this.parse(transcript) 
+    //         }
+    // }
   }
 
     // helloWorldHandler = () => {
@@ -37,7 +35,7 @@ class ActionProvider {
       this.setChatbotMessage(message); //create chatbot message
     }
 
-    ////////////// app ///////////////////////////////////
+    
 
     phoneHandler = () => {
       const message = this.createChatBotMessage("What phone are you using?",
@@ -67,52 +65,46 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
-    searchHandler = () => {
-      const message =this.createChatBotMessage(
-        "search handler successfully",
-        {
-          widget: "google",
-          loading: true,
-          terminateLoading: true,
-        }
-      )
-      this.setChatbotMessage(message);
-    }
-
-    // googleHandler = (lowerCaseMessage) => {
-    //   const message = this.createChatBotMessage("Do you want to search Google for more answers?" , 
-    //   {
-    //     widget:"google",
-    //     props: lowerCaseMessage,
-    //   })
+    // searchHandler = () => {
+    //   const message =this.createChatBotMessage(
+    //     "search handler successfully",
+    //     {
+    //       widget: "google",
+    //       loading: true,
+    //       terminateLoading: true,
+    //     }
+    //   )
     //   this.setChatbotMessage(message);
-    // } 
-
-    // searchHandler = (lowerCaseMessage) => {
-    //   window.open('https://www.google.com/search?q=' + lowerCaseMessage);
     // }
-     
+
+    // testing = () => {
+    //   const clientMessage = this.createClientMessage("I'm looking for this item")
+    //   this.setClientMessage(message);
+    // }
+
+    
+
+
    createClientMesssage = (message) => {
       const clientMessage = {
              message: message,
              type: "user", 
-             id: 1
       }
 
           return clientMessage;
     } 
 
 
-   userMessage = () => {
-    //  const message1 = this.createClientMesssage(message);
-     // this.setClientMessage(message)
-     setTimeout(() => {
-      this.recognition.start();
-    }, 1000) 
-    } 
+  //  userMessage = () => {
+  //   //  const message1 = this.createClientMesssage(message);
+  //    // this.setClientMessage(message)
+  //    setTimeout(() => {
+  //     this.recognition.start();
+  //   }, 1000) 
+  //   } 
 
 
-    setClientMessage = (message,clientMessage) => {
+    setClientMessage = (clientMessage) => {
       this.setState(prevState => ({
            ...prevState, messages: [...prevState.messages, clientMessage]
       }))
@@ -121,6 +113,7 @@ class ActionProvider {
     setChatbotMessage = (message) => {
       this.setState(state =>({ ...state, messages: [...state.messages, message] }) ) //create chatbot message instance
      }
+
 
 
     // appStoreHandler = () => {
@@ -423,16 +416,16 @@ class ActionProvider {
 
     safetyHandler = () => {
       var tips = [
-        "Avoid clicking on links in unsolicited emails & be wary of email attachments",
-        "Do not visit any untrusted website",
-        "When using credit card information for online purchase, lookout for \"HTTPS\" and lock icon",
-        "Avoid Public WIFI & Computers for online shopping",
-        "Set up Touch ID or Facial Recognition on your device and back it up with a unique PIN",
-        "Only download official apps from Google Play or App Store to avoid \"fake\" apps that mimic trusted brands in order to obtain your personal information.",
-        "Don't Jailbreak or Root your smartphone",
-        "Use different passwords for different accounts, if one is compromised, others remain safe",
-        "Use Multi-Factor Authentication (MFA) whenever available. It's your best defense against hacker",
-        "Use characters from ALL  categories, for example SeNioR#8Te$ch"
+        "Tips: Avoid clicking on links in unsolicited emails & be wary of email attachments",
+        "Tips: Do not visit any untrusted website",
+        "Tips: When using credit card information for online purchase, lookout for \"HTTPS\" and lock icon",
+        "Tips: Avoid Public WIFI & Computers for online shopping",
+        "Tips: Set up Touch ID or Facial Recognition on your device and back it up with a unique PIN",
+        "Tips: Only download official apps from Google Play or App Store to avoid \"fake\" apps that mimic trusted brands in order to obtain your personal information.",
+        "Tips: Don't Jailbreak or Root your smartphone",
+        "Tips: Use different passwords for different accounts, if one is compromised, others remain safe",
+        "Tips: Use Multi-Factor Authentication (MFA) whenever available. It's your best defense against hacker",
+        "Tips: Use characters from ALL  categories, for example SeNioR#8Te$ch"
       ];
 
       var randomTips = tips[Math.floor(Math.random() * tips.length)];

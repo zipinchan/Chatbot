@@ -6,7 +6,6 @@ import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
 import Google from './components/Widgets/Google';
 import GoogleSearch from './components/Widgets/googleSearch';
-import Microphone from './Microphone';
 import "./config.css";
 
 /* import LearningOptions from "./LearningOptions";
@@ -21,9 +20,6 @@ const config = {
     createChatBotMessage("Click here for some safety tips", {
       widget:"safetyTips"
     }),
-    createChatBotMessage("Click for voice", {
-      widget:"microphone"
-    })
     ],
 
     botName:"NerdyBot",
@@ -49,7 +45,6 @@ const config = {
     
     state:{
       todos:[],
-      userInput: "",
     },
 
    
@@ -77,11 +72,6 @@ const config = {
         widgetFunc: (props) => <GoogleSearch {...props} />,
         mapStateToProps: ["userInput"],
       },
-
-      {
-        widgetName: "microphone",
-        widgetFunc: (props) => <Microphone {...props} />,
-      }
     ]
 
 
