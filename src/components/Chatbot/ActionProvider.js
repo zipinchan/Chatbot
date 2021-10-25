@@ -4,9 +4,10 @@
 // const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 class ActionProvider {
-    constructor(createChatBotMessage, setStateFunc) {
+    constructor(createChatBotMessage, setStateFunc, stateRef) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
+<<<<<<< HEAD
     //   this.recognition = new SpeechRecognition()
     //     this.recognition.continous = true
     //     this.recognition.interimResults = false
@@ -21,6 +22,33 @@ class ActionProvider {
     //             this.parse(transcript) 
     //         }
     // }
+=======
+      this.stateRef = stateRef;
+      this.recognition = new SpeechRecognition()
+        this.recognition.continous = true
+        this.recognition.interimResults = false
+        this.recognition.lang = 'en-US'
+        this.recognition.maxAlternatives = 1;
+
+        this.recognition.start()
+        this.recognition.onresult = (e) => {
+            if  (e.results[0].isFinal) {
+                const transcript = e.results[0][0].transcript;
+                this.recognition.abort()
+                // this.parse(transcript)
+            }
+
+
+    }
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
+  }
+
+  componentDidMount() {
+    console.log(this.stateRef)
+  }
+
+  componentDidUpdate(){
+    console.log(this.stateRef)
   }
 
     // helloWorldHandler = () => {
@@ -65,6 +93,7 @@ class ActionProvider {
       this.setChatbotMessage(message);
     }
 
+<<<<<<< HEAD
     // searchHandler = () => {
     //   const message =this.createChatBotMessage(
     //     "search handler successfully",
@@ -74,6 +103,26 @@ class ActionProvider {
     //       terminateLoading: true,
     //     }
     //   )
+=======
+    searchHandler = () => {
+      const message =this.createChatBotMessage(
+        "search handler successfully",
+        {
+          widget: "google",
+          loading: true,
+          terminateLoading: true,
+        }
+      )
+      this.setChatbotMessage(message);
+    }
+
+    // googleHandler = (lowerCaseMessage) => {
+    //   const message = this.createChatBotMessage("Do you want to search Google for more answers?" ,
+    //   {
+    //     widget:"google",
+    //     props: lowerCaseMessage,
+    //   })
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
     //   this.setChatbotMessage(message);
     // }
 
@@ -82,6 +131,7 @@ class ActionProvider {
     //   this.setClientMessage(message);
     // }
 
+<<<<<<< HEAD
     
 
 
@@ -89,12 +139,20 @@ class ActionProvider {
       const clientMessage = {
              message: message,
              type: "user", 
+=======
+   createClientMesssage = (message) => {
+      const clientMessage = {
+             message: message,
+             type: "user",
+             id: 1
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
       }
 
           return clientMessage;
-    } 
+    }
 
 
+<<<<<<< HEAD
   //  userMessage = () => {
   //   //  const message1 = this.createClientMesssage(message);
   //    // this.setClientMessage(message)
@@ -102,6 +160,15 @@ class ActionProvider {
   //     this.recognition.start();
   //   }, 1000) 
   //   } 
+=======
+   userMessage = () => {
+    //  const message1 = this.createClientMesssage(message);
+     // this.setClientMessage(message)
+     setTimeout(() => {
+      this.recognition.start();
+    }, 1000)
+    }
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
 
 
     setClientMessage = (clientMessage) => {

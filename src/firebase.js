@@ -26,6 +26,7 @@ var firebaseApp = {
   //   updateStarCount(postElement, data);
   // });
 
+<<<<<<< HEAD
   // const getArraySize = (table) => {
   //   onValue(ref(db, `${table}/`), (snapshot) => {
   //     // console.log(snapshot.size)
@@ -60,6 +61,30 @@ var firebaseApp = {
     // const result = makeid(10);${result}
 
     set(ref(db, `feedback/`), {
+=======
+  const getArraySize = (table) => {
+    onValue(ref(db, `${table}/`), (snapshot) => {
+      // console.log(snapshot.size)
+      return(snapshot.size)
+    });
+  }
+
+  function getChat(){
+    let msg = 'erm';
+
+    onValue(ref(db, `chats/`), (snapshot) => {
+      msg = 'hello'
+      // console.log(snapshot.val().message)
+    });
+
+    return msg;
+  }
+
+  function writeUserData(fname, lname, email, feedback) {
+    const newPostKey = push(child(ref(db), 'chats')).key;
+
+    set(ref(db, `feedback/${newPostKey}` ), {
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
         firstname: fname,
         lastname: lname,
         email: email,
@@ -67,6 +92,7 @@ var firebaseApp = {
     })
   }
 
+<<<<<<< HEAD
   // function chatDB(message) {
   //   const newPostKey = push(child(ref(db), 'chats')).key;
 
@@ -74,12 +100,27 @@ var firebaseApp = {
   //       message: message
   //   })
   // }
+=======
+  function chatDB(message) {
+    const newPostKey = push(child(ref(db), 'chats')).key;
+
+    set(ref(db, `chats/`), {
+        message: message
+    })
+  }
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
 
 
 
 export {
   db,
   writeUserData,
+<<<<<<< HEAD
   // chatDB,
   // getChat
  };
+=======
+  chatDB,
+  getChat
+ };
+>>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
