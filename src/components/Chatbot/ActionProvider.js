@@ -4,9 +4,10 @@
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 class ActionProvider {
-    constructor(createChatBotMessage, setStateFunc) {
+    constructor(createChatBotMessage, setStateFunc, stateRef) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
+      this.stateRef = stateRef;
       this.recognition = new SpeechRecognition()
         this.recognition.continous = true
         this.recognition.interimResults = false
@@ -18,11 +19,19 @@ class ActionProvider {
             if  (e.results[0].isFinal) {
                 const transcript = e.results[0][0].transcript;
                 this.recognition.abort()
-                // this.parse(transcript) 
+                // this.parse(transcript)
             }
-        
+
 
     }
+  }
+
+  componentDidMount() {
+    console.log(this.stateRef)
+  }
+
+  componentDidUpdate(){
+    console.log(this.stateRef)
   }
 
     // helloWorldHandler = () => {
@@ -80,27 +89,27 @@ class ActionProvider {
     }
 
     // googleHandler = (lowerCaseMessage) => {
-    //   const message = this.createChatBotMessage("Do you want to search Google for more answers?" , 
+    //   const message = this.createChatBotMessage("Do you want to search Google for more answers?" ,
     //   {
     //     widget:"google",
     //     props: lowerCaseMessage,
     //   })
     //   this.setChatbotMessage(message);
-    // } 
+    // }
 
     // searchHandler = (lowerCaseMessage) => {
     //   window.open('https://www.google.com/search?q=' + lowerCaseMessage);
     // }
-     
+
    createClientMesssage = (message) => {
       const clientMessage = {
              message: message,
-             type: "user", 
+             type: "user",
              id: 1
       }
 
           return clientMessage;
-    } 
+    }
 
 
    userMessage = () => {
@@ -108,8 +117,8 @@ class ActionProvider {
      // this.setClientMessage(message)
      setTimeout(() => {
       this.recognition.start();
-    }, 1000) 
-    } 
+    }, 1000)
+    }
 
 
     setClientMessage = (message,clientMessage) => {

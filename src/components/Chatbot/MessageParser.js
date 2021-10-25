@@ -8,6 +8,7 @@
 
 //The final piece of the puzzle is the actionprovider. We'll take a look at that next. It will handle bot actions. It will come as no surprise then, that the actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
 
+import {db, chatDB} from '../../firebase';
 
 
 var whatsappKnowledge = [
@@ -366,14 +367,15 @@ var error2Handler = [
 ]
 
 // const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
- 
+
 class MessageParser {
-    constructor(actionProvider) {
+    constructor(actionProvider, state) {
       this.actionProvider = actionProvider;
-      this.state = 
-      {
-        userInput: "hi"
-      };
+      this.state = state;
+      // this.state =
+      // {
+      //   userInput: "hi"
+      // };
 
       // this.recognition = new SpeechRecognition()
       //   this.recognition.continous = true
@@ -388,17 +390,19 @@ class MessageParser {
       //           this.recognition.abort()
       //           this.parse(transcript)
       //       }
-        
+
 
     } // constructor end
 
-    
+
 
     parse(message) {
-    //console.log(message) 
+
+      chatDB(message);
+      // console.log(message)
     //   setTimeout(() => {
     //   this.recognition.start();
-    // }, 1000) //1 sec 
+    // }, 1000) //1 sec
 
    // this.actionProvider.userMessage();
 
@@ -531,7 +535,7 @@ class MessageParser {
             this.actionProvider.handler(appErrorHandler);
           }
         }
-        
+
         else if ((lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application")) && (lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install"))) { //includes the word "app"
           this.actionProvider.phoneHandler();
         }
@@ -639,7 +643,7 @@ class MessageParser {
         //////////////////////////////////////////////
 
         else {
-      
+
         //  var searchHandler = (lowerCaseMessage) => {
         //     window.open('https://www.google.com/search?q=' + lowerCaseMessage);
         //   }
@@ -665,7 +669,7 @@ class MessageParser {
           //<button onClick={window.open(lowerCaseMessage)}>  </button>
           //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
           }
-          
+
       } //first if
 ////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
       else if (lowerCaseMessage.includes("what")) {
@@ -775,8 +779,8 @@ class MessageParser {
         else {
           this.actionProvider.handler(errorHandler);
         }
-        
-        
+
+
       } //what
 
       else {
