@@ -15,7 +15,7 @@ class Footer extends Component{
                         </h2>
                         <p className="my-3"> Hands-on Smartphone Training for Seniors </p>
                         <p>
-                        The training session is divided into three phases: Introductory, Exploring New Information/Knowledge and Review. Each session will take about 10 minutes introduction, 10 minutes on new information / knowledge and 10 minutes for questions and review. Upon completion of training, there is daily homework for independent practice.
+                        The training session is divided into three phases: Introductory, Exploring New Information / Knowledge and Review. Each session will take about 10 minutes introduction, 10 minutes on new information / knowledge and 10 minutes for questions and review. Upon completion of training, there is daily homework for independent practice.
                         </p>
                     </div>
                     <div className="col-lg-3 col-md-6 mt-lg-0 mt-5">

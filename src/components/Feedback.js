@@ -38,7 +38,7 @@ class Feedback extends Component{
             <div className="text-center px-lg-5">
                 <h3 className="heading text-center mb-3 mb-sm-5">Provide Us Your Feedback</h3>
                 <div className="title-desc text-center px-lg-5">
-                    <p className="px-lg-5 sub-wthree"> Feel free to provide us your feedback. Your feedback is important to help us improve our website and improve your satisfaction. </p>
+                    <p className="px-lg-5 sub-wthree"> Feel free to provide us your feedback. Your feedback is important to help us improve our website and improve your satisfaction level. </p>
                 </div>
             </div>
             <div className="contact-w3pvt-form mt-5">

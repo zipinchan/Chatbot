@@ -16,6 +16,28 @@ class Registration extends Component{
 	</ol>
 </div>
     <section className="content-info py-5">
+
+    <div id="Awesome" class="anim750">
+	
+    <div class="reveal circle_wrapper">
+          <div class="circle">Sorry! </div>
+      </div>
+                          
+      <div class="sticky anim750">
+          <div class="front circle_wrapper anim750">
+              <div class="circle anim750"></div>
+        </div>
+      </div>
+      
+    <h4>Close!</h4>
+                          
+    <div class="sticky anim750">
+          <div class="back circle_wrapper anim750">
+              <div class="circle anim750"></div>
+          </div>
+      </div>
+                          
+  </div>
         <div className="container py-md-5">
             <div className="text-center px-lg-5">
                 <h3 className="heading text-center mb-3 mb-sm-5">Registration</h3>
@@ -47,7 +69,7 @@ class Registration extends Component{
                             </div>
                         </div>
                         <div className="form-group mx-auto mt-3">
-                            <button type="submit" className="btn submit">Submit</button>
+                            {/* <button type="submit" className="btn submit">Submit</button> */}
                         </div>
                     </div>
 
