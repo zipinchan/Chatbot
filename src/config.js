@@ -1,10 +1,10 @@
 import React from 'react';
 import { createChatBotMessage } from "react-chatbot-kit";
-import BotAvatar from "./components/BotAvatar/BotAvatar";
-import Phone from "./components/Widgets/Phone";
-import Safety from './components/Widgets/Safety';
-import Google from './components/Widgets/Google';
-import "./config.css";
+import BotAvatar from "../../Chatbot/src/components/BotAvatar/BotAvatar";
+import Phone from "../../Chatbot/src/components/Widgets/Phone";
+import Safety from '../../Chatbot/src/components/Widgets/Safety';
+import Google from '../../Chatbot/src/components/Widgets/Google';
+import "../../Chatbot/src/config.css";
 
 
 const config = {

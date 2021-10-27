@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import {writeUserData} from '../firebase';
+import {writeUserData} from '../../../Chatbot/src/firebase';
 
 
 class Feedback extends Component{

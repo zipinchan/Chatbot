@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Phone.css";
+import "../../../../Chatbot/src/components/Widgets/Phone.css";
 
 var appStoreHandler = [
   { message: '1. Launch the App Store.' },

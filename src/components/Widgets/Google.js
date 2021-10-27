@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from "./Link"
+import Link from "../../../../Chatbot/src/components/Widgets/Link.css"
 
 
 function Google(props){
