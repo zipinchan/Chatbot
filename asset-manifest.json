@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Chatbot/static/css/main.119c6cf3.chunk.css",
-    "main.js": "/Chatbot/static/js/main.71366ea5.chunk.js",
-    "main.js.map": "/Chatbot/static/js/main.71366ea5.chunk.js.map",
-    "runtime-main.js": "/Chatbot/static/js/runtime-main.87cf55ac.js",
-    "runtime-main.js.map": "/Chatbot/static/js/runtime-main.87cf55ac.js.map",
-    "static/js/2.993a5ec6.chunk.js": "/Chatbot/static/js/2.993a5ec6.chunk.js",
-    "static/js/2.993a5ec6.chunk.js.map": "/Chatbot/static/js/2.993a5ec6.chunk.js.map",
-    "index.html": "/Chatbot/index.html",
-    "precache-manifest.bbef310a3737fe2fb88efabda5bda976.js": "/Chatbot/precache-manifest.bbef310a3737fe2fb88efabda5bda976.js",
-    "service-worker.js": "/Chatbot/service-worker.js",
-    "static/css/main.119c6cf3.chunk.css.map": "/Chatbot/static/css/main.119c6cf3.chunk.css.map",
-    "static/js/2.993a5ec6.chunk.js.LICENSE.txt": "/Chatbot/static/js/2.993a5ec6.chunk.js.LICENSE.txt",
-    "static/media/bot.jpg": "/Chatbot/static/media/bot.5b5f61a9.jpg",
-    "static/media/link.665a8aa5.svg": "/Chatbot/static/media/link.665a8aa5.svg"
+    "main.css": "./static/css/main.5ffd0628.chunk.css",
+    "main.js": "./static/js/main.ffa14b53.chunk.js",
+    "main.js.map": "./static/js/main.ffa14b53.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.675cfa14.js",
+    "runtime-main.js.map": "./static/js/runtime-main.675cfa14.js.map",
+    "static/js/2.e29279cf.chunk.js": "./static/js/2.e29279cf.chunk.js",
+    "static/js/2.e29279cf.chunk.js.map": "./static/js/2.e29279cf.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.fe2017db6dffb827595c65e0de8391da.js": "./precache-manifest.fe2017db6dffb827595c65e0de8391da.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.5ffd0628.chunk.css.map": "./static/css/main.5ffd0628.chunk.css.map",
+    "static/js/2.e29279cf.chunk.js.LICENSE.txt": "./static/js/2.e29279cf.chunk.js.LICENSE.txt",
+    "static/media/bot.jpg": "./static/media/bot.5b5f61a9.jpg",
+    "static/media/link.665a8aa5.svg": "./static/media/link.665a8aa5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.87cf55ac.js",
-    "static/js/2.993a5ec6.chunk.js",
-    "static/css/main.119c6cf3.chunk.css",
-    "static/js/main.71366ea5.chunk.js"
+    "static/js/runtime-main.675cfa14.js",
+    "static/js/2.e29279cf.chunk.js",
+    "static/css/main.5ffd0628.chunk.css",
+    "static/js/main.ffa14b53.chunk.js"
   ]
 }
