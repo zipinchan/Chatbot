@@ -1,27 +1,18 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
-import {db, writeUserData} from '../firebase';
+import {writeUserData} from '../firebase';
 
 
 class Feedback extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            fname: 'hi',
+            fname: '',
             lname: '',
             email: '',
             feedback: ''
-            // value:''
         };
-    
-        // this.handleChange = this.handleChange.bind(this);
       }
-
-    //   handlerChange(event) {
-    //       this.setState({value: event.target.value}); 
-    //   }
-      
-
 
     render(){
         return(
@@ -53,7 +44,6 @@ class Feedback extends Component{
                             <div class="form-group">
                                 <label>First Name</label>
 
-                                {/*onChange={event => this.setState({ fname: event.target.value})} */}
                                 <input class="form-control" id="fname" type="text" name="Name" placeholder="" required=""  onChange={event => this.setState({ fname: event.target.value})}/>
                             </div>
                             <div class="form-group">
@@ -74,10 +64,7 @@ class Feedback extends Component{
                         </div>
 
                         <div class="form-group mx-auto mt-3">
-                            <button onClick={() => {writeUserData(this.state.fname, this.state.lname, this.state.email, this.state.feedback)}} class="btn submit">Submit</button>
-
-
-                           {/*<button onClick="writeUserData(fname, lname, email, feedback);" class="btn submit">Submit</button>*/}
+                            <button type="button" onClick={() => {writeUserData(this.state.fname, this.state.lname, this.state.email, this.state.feedback) ; alert("Thank you, your feedback has been sent.")}} class="btn submit">Submit</button>
                         </div>
                          
                         

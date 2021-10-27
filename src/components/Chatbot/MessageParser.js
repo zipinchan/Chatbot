@@ -8,12 +8,6 @@
 
 //The final piece of the puzzle is the actionprovider. We'll take a look at that next. It will handle bot actions. It will come as no surprise then, that the actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
 
-<<<<<<< HEAD
-import {db} from '../../firebase';
-=======
-import {db, chatDB} from '../../firebase';
-
->>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
 
 var whatsappKnowledge = [
   { message: "WhatsApp uses your phone’s cellular or Wi-Fi connection to facilitate messaging and voice calling to nearly anyone on the planet, alone or in a group and is especially nice for families and small collaborative workgroups. The app lets you make calls, send and receive messages, and share documents, photos, and videos." }
@@ -286,12 +280,6 @@ var appKnowledge = [
   { message: "An app, which is short for \"application,\" is a type of software that can be installed and run on a computer, tablet, smartphone or other electronic devices. Simply put, an app is a type of software that allows you to perform specific tasks. For example, Whatsapp, Facebook, Grab etc." },
 ]
 
-var safetyHandler = [
-  { message: "" },
-  { message: "" },
-  { message: "" },
-  { message: "" },
-]
 
 var simKnowledge = [
   { message: "SIM cards are small cards that contain a chip that holds a unique identification number, phone number and other data that links to the consumer" }
@@ -363,14 +351,12 @@ var appErrorHandler = [
 
 var errorHandler = [
   { message: "Sorry, I don't have an answer for that." },
-  { message: "Do you want to search Google for more answers?"},
 ]
 
 var error2Handler = [
   { message: "Please start your sentence with what or how" }
 ]
 
-<<<<<<< HEAD
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
  
 class MessageParser {
@@ -393,57 +379,16 @@ class MessageParser {
                 this.parse(transcript)
             }
           }
-=======
-// const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-
-class MessageParser {
-    constructor(actionProvider, state) {
-      this.actionProvider = actionProvider;
-      this.state = state;
-      // this.state =
-      // {
-      //   userInput: "hi"
-      // };
-
-      // this.recognition = new SpeechRecognition()
-      //   this.recognition.continous = true
-      //   this.recognition.interimResults = false
-      //   this.recognition.lang = 'en-US'
-      //   this.recognition.maxAlternatives = 1;
-
-      //   this.recognition.start()
-      //   this.recognition.onresult = (e) => {
-      //       if  (e.results[0].isFinal) {
-      //           const transcript = e.results[0][0].transcript;
-      //           this.recognition.abort()
-      //           this.parse(transcript)
-      //       }
-
->>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
 
     } // constructor end
 
 
 
     parse(message) {
-<<<<<<< HEAD
-     // chatDB(message);
-=======
-
-      chatDB(message);
-      // console.log(message)
-    //   setTimeout(() => {
-    //   this.recognition.start();
-    // }, 1000) //1 sec
-
-   // this.actionProvider.userMessage();
-
->>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
       const lowerCaseMessage = message.toLowerCase()
 
-      if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && !lowerCaseMessage.includes("history")) {
+      if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && (!lowerCaseMessage.includes("history")) && (!lowerCaseMessage.includes("this"))) {
         this.actionProvider.handler(helloWorldHandler);
-        //window.open("https://towardsdatascience.com/build-a-simple-chatbot-with-python-and-google-search-c000aa3f73f0");
         }
 
       else if(lowerCaseMessage.includes("how") || lowerCaseMessage.includes("steps") || lowerCaseMessage.includes("step")){
@@ -676,40 +621,11 @@ class MessageParser {
         //////////////////////////////////////////////
 
         else {
-<<<<<<< HEAD
-      
-         var searchHandler = (lowerCaseMessage) => {
-            window.open('https://www.google.com/search?q=' + lowerCaseMessage);
-          }
-=======
-
-        //  var searchHandler = (lowerCaseMessage) => {
-        //     window.open('https://www.google.com/search?q=' + lowerCaseMessage);
-        //   }
->>>>>>> 111933137e3ca80ec331949fcb3e35da902ee9c4
-
-      //  const handleClick = () => {
-      //   this.setState = () => ({
-      //     userInput: "lowerCaseMessage"
-      //   }, () => { console.log("hi")}
-      //   )
-      //  };
 
           this.actionProvider.handler(errorHandler);
-          searchHandler(lowerCaseMessage);
-          // this.actionProvider.searchHandler();
+          this.actionProvider.searchHandler();
 
-          // this.setState = () => ({
-          // userInput: "lowerCaseMessage"
-          // }, () => { console.log(this.state.userInput)}
-          // )
-          // this.setState();
-          // console.log(this.state.userInput);
-          //searchHandler(lowerCaseMessage);
-
-          //<button onClick={window.open(lowerCaseMessage)}>  </button>
-          //window.open('https://www.google.com/search?q=' + lowerCaseMessage);
-          }
+        }
 
       } //first if
 ////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
@@ -819,6 +735,8 @@ class MessageParser {
   ////////////////////////////////////////////////////////////////
         else {
           this.actionProvider.handler(errorHandler);
+          this.actionProvider.searchHandler();
+
         }
 
 
@@ -827,9 +745,7 @@ class MessageParser {
       else if (lowerCaseMessage.includes("mic")) {
         setTimeout(() => {
           this.recognition.start();
-        }, 5000) //5 sec 
-     //   const hello = this.actionProvider.createChatBotMessage(transcript);
-      //  this.actionProvider.setChatbotMessage(hello);
+        }, 5000) 
       }
 
 

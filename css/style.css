@@ -136,7 +136,7 @@ p.sub-para {
 
 .slider-info p {
     color: #fff;
-  font-size: 14px;
+    font-size: 50px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 1px;
@@ -170,7 +170,7 @@ h4.agile-title,h1.agile-title,h2.agile-title {
     line-height: 1.2em;
     font-weight: 100;
 	color: #fff;
-	font-size: 70px;
+    font-size: 70px;
     line-height: 78px;
     font-weight: 500;
 }

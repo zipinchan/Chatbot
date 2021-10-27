@@ -1,8 +1,9 @@
 .url-link {
     font-size: 0.9rem;
     padding: 10px;
-    border-radius: 3px;
-    background-color: rgb(59, 211, 99);
+    border-radius: 15px;
+    background-color: #FFC06E;
+    width: fit-content;
     display: flex;
     align-items: center;
     color: #fff;
@@ -16,6 +17,7 @@
   }
   
   .url-header {
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   

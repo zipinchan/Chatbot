@@ -4,7 +4,7 @@ import "./Phone";
 
 const Safety = (props) => {
     const options = [
-      { text: "Tips", 
+      { text: "Click me for some safety tips", 
         handler: props.actionProvider.safetyHandler, 
         id: 1,
         },

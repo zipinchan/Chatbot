@@ -1,49 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import "./Phone.css";
-import Options from "../Widgets/Options/Options";
+import Link from "./Link"
 
 
-
-const Google = (props) => {
+function Google(props){
   const { setState } = props;
-  const [data, setData] = useState([]);
-  // console.log(props)
+  const [searchWord, setSearchWord] = useState('');
 
   useEffect(() => {
-    // console.log(props.actionProvider.stateRef)
-    // props.actionProvider.stateRef(item => {
-    //   console.log(item)
-    // })
-    // setState(state=> ({
-    //   ...state,
-    //   messages: [...state.messages, message]
-    //   console.log(state.messages)
-    //
-    // }))
+    setState(state => {
+      handleSomething(state.messages)
+      return state;
+    })
   }, [])
 
-    const options = [
-        {
-           text:"Search Google",
-           handler: props.actionProvider.googleSearch,
-           id: 1,
-        }
-    ];
+  useEffect(() => {
+    console.log(searchWord)
+  }, [searchWord])
 
+  const handleSomething = (item) => {
+    const userInput = item.filter(data => {
+      if(data.type === 'user') {
+        return true
+      } else {
+        return false
+      }
+    })
+    setSearchWord(userInput[userInput.length - 1]);
+  }
 
-    // return <Options options={options} title="Parking options" {...props} />;
+  const getUrl = () => {
+    return `https://www.google.com/search?q=${searchWord.message}`;
+  };
 
-    const optionsMarkup = options.map((option) => (
-      <button
-        className="learning-option-button"
-        key={option.id}
-        onClick={option.handler}
-      >
-        {option.text}
-      </button>
-    ));
-
-    return <div className="learning-options-container">{optionsMarkup}</div>;
+  return <Link url={getUrl()} title={"search Google for more answers"} />;
   };
 
 
