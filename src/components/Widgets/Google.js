@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import "./Phone.css";
 import Link from "./Link"
 
 

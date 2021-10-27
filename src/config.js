@@ -9,8 +9,8 @@ import "./config.css";
 
 const config = {
   initialMessages: [
-    createChatBotMessage("Hi, I'm here to help. What do you want to learn?", ),
-    createChatBotMessage("or", {
+    createChatBotMessage("Hi, I'm here to help. What do you want to learn?"),
+    createChatBotMessage("Type \"mic\" everytime you want to use your microphone", {
       widget:"safetyTips"
     }),
     ],

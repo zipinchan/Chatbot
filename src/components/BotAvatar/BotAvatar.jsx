@@ -1,6 +1,6 @@
 import React from 'react';
 import './BotAvatar.css';
-import Avatar from "./bot.jpg";
+import Avatar from "../icons/bot.jpg";
 
 const BotAvatar = () => {
     return (

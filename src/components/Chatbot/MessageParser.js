@@ -385,6 +385,7 @@ class MessageParser {
 
 
     parse(message) {
+
       const lowerCaseMessage = message.toLowerCase()
 
       if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && (!lowerCaseMessage.includes("history")) && (!lowerCaseMessage.includes("this"))) {
@@ -739,13 +740,13 @@ class MessageParser {
 
         }
 
-
       } //what
 
       else if (lowerCaseMessage.includes("mic")) {
         setTimeout(() => {
           this.recognition.start();
-        }, 5000) 
+        }, 500) //0.5 secs
+        
       }
 
 
