@@ -1,28 +1,28 @@
-// import React, { useState } from 'react';
-// import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
-// import Chatbot from 'react-chatbot-kit' 
-// import ActionProvider from './components/Chatbot/ActionProvider';
-// import MessageParser from './components/Chatbot/MessageParser';
-// import config from './config';
-// import Home from './components/Home';
-// import Navbar from './components/partial/Navbar';
-// import Footer from './components/partial/Footer';
-// import About from './components/About';
-// import Registration from './components/Registration';
-// import Feedback from './components/Feedback';
-
 import React, { useState } from 'react';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 import Chatbot from 'react-chatbot-kit' 
-import ActionProvider from '/src/components/Chatbot/ActionProvider';
-import MessageParser from '/src/components/Chatbot/MessageParser';
-import config from '/src/config';
-import Home from '/src/components/Home';
-import Navbar from '/src/components/partial/Navbar';
-import Footer from '/src/components/partial/Footer';
-import About from '/src/components/About';
-import Registration from '/src/components/Registration';
-import Feedback from '/src/components/Feedback';
+import ActionProvider from './components/Chatbot/ActionProvider';
+import MessageParser from './components/Chatbot/MessageParser';
+import config from './config';
+import Home from './components/Home';
+import Navbar from './components/partial/Navbar';
+import Footer from './components/partial/Footer';
+import About from './components/About';
+import Registration from './components/Registration';
+import Feedback from './components/Feedback';
+
+// import React, { useState } from 'react';
+// import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
+// import Chatbot from 'react-chatbot-kit' 
+// import ActionProvider from '/src/components/Chatbot/ActionProvider';
+// import MessageParser from '/src/components/Chatbot/MessageParser';
+// import config from './config';
+// import Home from '/src/components/Home';
+// import Navbar from '/src/components/partial/Navbar';
+// import Footer from '/src/components/partial/Footer';
+// import About from '/src/components/About';
+// import Registration from '/src/components/Registration';
+// import Feedback from '/src/components/Feedback';
 
 function App() {
 
