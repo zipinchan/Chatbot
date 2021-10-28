@@ -1,28 +1,28 @@
-// import React, { useState } from 'react';
-// import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
-// import Chatbot from 'react-chatbot-kit' 
-// import ActionProvider from './components/Chatbot/ActionProvider';
-// import MessageParser from './components/Chatbot/MessageParser';
-// import config from './config';
-// import Home from './components/Home';
-// import Navbar from './components/partial/Navbar';
-// import Footer from './components/partial/Footer';
-// import About from './components/About';
-// import Registration from './components/Registration';
-// import Feedback from './components/Feedback';
-
 import React, { useState } from 'react';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
 import Chatbot from 'react-chatbot-kit' 
-import ActionProvider from '/Chatbot/src/components/Chatbot/ActionProvider';
-import MessageParser from '/Chatbot/src/components/Chatbot/MessageParser';
-import config from '/Chatbot/src/config';
-import Home from '/Chatbot/src/components/Home';
-import Navbar from '/Chatbot/src/components/partial/Navbar';
-import Footer from '/Chatbot/src/components/partial/Footer';
-import About from '/Chatbot/src/components/About';
-import Registration from '/Chatbot/src/components/Registration';
-import Feedback from '/Chatbot/src/components/Feedback';
+import ActionProvider from './components/Chatbot/ActionProvider';
+import MessageParser from './components/Chatbot/MessageParser';
+import config from './config';
+import Home from './components/Home';
+import Navbar from './components/partial/Navbar';
+import Footer from './components/partial/Footer';
+import About from './components/About';
+import Registration from './components/Registration';
+import Feedback from './components/Feedback';
+
+// import React, { useState } from 'react';
+// import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'; 
+// import Chatbot from 'react-chatbot-kit' 
+// import ActionProvider from '/Chatbot/src/components/Chatbot/ActionProvider';
+// import MessageParser from '/Chatbot/src/components/Chatbot/MessageParser';
+// import config from '/Chatbot/src/config';
+// import Home from '/Chatbot/src/components/Home';
+// import Navbar from '/Chatbot/src/components/partial/Navbar';
+// import Footer from '/Chatbot/src/components/partial/Footer';
+// import About from '/Chatbot/src/components/About';
+// import Registration from '/Chatbot/src/components/Registration';
+// import Feedback from '/Chatbot/src/components/Feedback';
 
 function App() {
 
