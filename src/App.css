@@ -15,7 +15,7 @@
 
 .react-chatbot-kit-chat-container {
   width: 100% !important;
-  border-radius: 25px !important;
+  border-radius: 25px ;
 }
 
 .react-chatbot-kit-chat-message-container {
@@ -36,8 +36,8 @@
   background-color: rgb(4,52,105) ;
   margin-left: 5px !important;
   width: fit-content ;
-  font-size: 18px !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-size: 18px ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .react-chatbot-kit-user-chat-message {
