@@ -15,7 +15,7 @@
 
 .react-chatbot-kit-chat-container {
   width: 100% !important;
-  border-radius: 25px ;
+  border-radius: 25px !important;
 }
 
 .react-chatbot-kit-chat-message-container {
@@ -28,16 +28,16 @@
 }
 
 .react-chatbot-kit-chat-inner-container {
-  font-family: Verdana, Geneva, Tahoma, sans-serif ;
-  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-weight: bold !important;
 }
 
 .react-chatbot-kit-chat-bot-message {
   background-color: rgb(4,52,105) ;
   margin-left: 5px !important;
-  width: fit-content ;
-  font-size: 18px ;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: fit-content !important;
+  font-size: 18px !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
 .react-chatbot-kit-user-chat-message {
@@ -47,7 +47,7 @@
 
 .react-chatbot-kit-chat-input {
     font-size: 18px !important;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
 .react-chatbot-kit-chat-input-form {
