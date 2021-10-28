@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../../Chatbot/src/components/BotAvatar/BotAvatar.css';
-import Avatar from "../../../../Chatbot/src/components/icons/bot.jpg";
+import './BotAvatar.css';
+import Avatar from "../icons/bot.jpg";
 
 const BotAvatar = () => {
     return (

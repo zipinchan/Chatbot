@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../../Chatbot/src/index.css';
-import App from '../../Chatbot/src/App';
-import * as serviceWorker from '../../Chatbot/src/serviceWorker';
-import ActionProvider from '../../Chatbot/src/components/Chatbot/ActionProvider';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import ActionProvider from './components/Chatbot/ActionProvider';
 import { createChatBotMessage } from "react-chatbot-kit"; 
-import MessageParser from '../../Chatbot/src/components/Chatbot/MessageParser'; 
+import MessageParser from './components/Chatbot/MessageParser'; 
 
 ReactDOM.render(
     <React.StrictMode>
