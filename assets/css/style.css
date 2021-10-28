@@ -766,11 +766,6 @@ li.breadcrumb-item a {
     align-items: center;
   }
 
-  .react-chatbot-kit-chat-container {
-    width: 100% !important; 
-    border-radius: 25px;
-  }
-
   .app-chatbot-container {
     margin: 100px 0; 
     display: flex;
