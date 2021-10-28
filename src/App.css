@@ -13,6 +13,11 @@
   }
 }
 
+.react-chatbot-kit-chat-container {
+  width: 100% !important;
+  border-radius: 25px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,9 +29,9 @@
   color: white;
 }
 
-.app-chatbot-container {
+/* .app-chatbot-container {
   width: 10%;
-}
+} */
 
 
 .App-link {
