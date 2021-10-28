@@ -1,6 +1,35 @@
-  /* .app-chatbot-container {
-    width: 50%;
-  } */
+.app-chatbot-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+  padding: 10px;
+  color: #fff;
+  background-color: #0d2d44;
+  background-image: url("../images/bot2.jpg");
+  background-size: cover;
+  border: none;
+  position: fixed;
+  bottom: 25px;
+  z-index: 9999;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-chatbot-container {
+  margin: 100px 0; 
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 50%;
+  height:auto;
+  left: 40px;
+  bottom: 55px;
+  z-index: 9999;
+  box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
+  border-radius: 5px;
+}
  
   .react-chatbot-kit-chat-container {
     width: 100%;
