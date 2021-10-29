@@ -4,6 +4,9 @@ import BotAvatar from "./components/BotAvatar/BotAvatar";
 import Phone from "./components/Widgets/Phone";
 import Safety from './components/Widgets/Safety';
 import Google from './components/Widgets/Google';
+import Install from './components/Widgets/Install';
+import Tng from './components/Widgets/Tng';
+import Youtube from './components/Widgets/Youtube';
 import "./config.css";
 
 
@@ -22,6 +25,7 @@ const config = {
         backgroundColor: "#043469", 
         padding: "10px", 
         color:"#90B860", 
+        
       }}> Talk to NerdyBot! </div>
     },
     
@@ -37,7 +41,6 @@ const config = {
     },
     
     state:{
-      todos:[],
     },
 
    
@@ -56,6 +59,21 @@ const config = {
         widgetName: "google",
         widgetFunc: (props) => <Google {...props} />,
       },
+
+      {
+        widgetName: "install",
+        widgetFunc: (props) => <Install {...props} />,
+      },
+
+      {
+        widgetName: "tng",
+        widgetFunc: (props) => <Tng {...props} />,
+      },
+
+      {
+        widgetName: "youtube",
+        widgetFunc: (props) => <Youtube {...props} />,
+      }
 
     ]
 

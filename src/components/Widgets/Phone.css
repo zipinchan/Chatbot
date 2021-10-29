@@ -7,8 +7,12 @@
   .learning-option-button {
     padding: 0.5rem;
     border-radius: 25px;
-    background: #043469;
-    color: #E5D1B9;
-   /* border: 1px solid green; */
+    background: #FF7F40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #0D2A43;
+    font-size: 20px;
+   /* border: 1px solid green;  color: #E5D1B9; */
     margin: 3px;
   }

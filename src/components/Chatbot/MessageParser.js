@@ -345,16 +345,21 @@ var tngKnowledge = [
   { message: "Touch 'n Go eWallet is a Malaysian digital wallet and online payment platform, established in Kuala Lumpur, Malaysia, in July 2017 as a joint venture between Touch 'n Go and Ant Financial. It allows users to make payments at over 280,000 merchant touch points via QR code; pay for tolls, street parking, payment on e-hailing, car-sharing apps or taxis via RFID or PayDirect; pay bills; top-up mobile prepaid; pay for purchases on e-commerce websites or apps; order food delivery; perform peer-to-peer money transfers; renew car insurance and purchase unique insurance plans; and purchase movie, bus, trains, and airline tickets." },
 ]
 
+var install = [
+  { message: "Sorry, your question is too broad."} 
+]
+
 var appErrorHandler = [
   { message: "Please specify if you are using an Apple or Android phone." }
 ]
 
 var errorHandler = [
-  { message: "Sorry, I don't have an answer for that." },
+  { message: "Sorry, I don't have an answer for that."},
+  { message: "Can you give more details?"},
 ]
 
 var error2Handler = [
-  { message: "Please start your sentence with what or how" }
+  { message: "Please start your sentence with what or how." }
 ]
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -419,6 +424,7 @@ class MessageParser {
 
           else {
             this.actionProvider.handler(errorHandler);
+            this.actionProvider.tngHandler();
           }
         }
 ////////////////////////////////////////////////////////////////
@@ -515,7 +521,9 @@ class MessageParser {
           }
         }
 
-        else if ((lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application")) && (lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install"))) { //includes the word "app"
+        //(lowerCaseMessage.includes("app") || lowerCaseMessage.includes("application")) && (
+
+        else if (lowerCaseMessage.includes("download") || lowerCaseMessage.includes("install")) { //includes the word "app"
           this.actionProvider.phoneHandler();
         }
 
@@ -616,6 +624,7 @@ class MessageParser {
 
           else {
             this.actionProvider.handler(errorHandler);
+            this.actionProvider.searchHandler();
           }
         } ///grab
 
@@ -625,8 +634,9 @@ class MessageParser {
 
           this.actionProvider.handler(errorHandler);
           this.actionProvider.searchHandler();
-
         }
+
+        this.actionProvider.youtubeHandler();
 
       } //first if
 ////////////////////////////////////////////////////////// knowledge based /////////////////////////////////////////////////////////////////////////////////////
@@ -732,12 +742,11 @@ class MessageParser {
         this.actionProvider.handler(tngKnowledge);
       }
 
-
+      
   ////////////////////////////////////////////////////////////////
         else {
           this.actionProvider.handler(errorHandler);
           this.actionProvider.searchHandler();
-
         }
 
       } //what
@@ -749,16 +758,25 @@ class MessageParser {
         
       }
 
+      else if (lowerCaseMessage.includes("install")) {
+        this.actionProvider.handler(install);
+        this.actionProvider.installHandler();
+      }
 
+      else if (lowerCaseMessage.includes("touchngo") || lowerCaseMessage.includes("tng") || lowerCaseMessage.includes("touch n go") || lowerCaseMessage.includes("touch 'n go")){
+        this.actionProvider.tngHandler();
+      }
 
       else {
         this.actionProvider.handler(error2Handler);
       } //else
 
+      
+
     } //parse
   }
 
 
-    export default  MessageParser;
+    export default MessageParser;
 
   //  new MessageParser(actionProvider,state)

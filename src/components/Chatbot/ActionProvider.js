@@ -44,7 +44,7 @@ class ActionProvider {
 
     searchHandler = () => {
          const message2 =this.createChatBotMessage(
-        "Do you want to search Google for more answers?",
+        "But don't worry! Do you want to search Google for more answers?",
         {
           widget: "google",
           loading: true,
@@ -54,6 +54,32 @@ class ActionProvider {
       this.setChatbotMessage(message2);
     }
 
+    installHandler = () => {
+      const message = this.createChatBotMessage(
+        "Do you mean: ", {
+          widget: "install"
+        }
+      )
+
+      this.setChatbotMessage(message);
+    }
+
+    youtubeHandler = () => {
+      const message = this.createChatBotMessage(
+        "Anyway, here are some videos you can watch to learn more!", {
+        widget: "youtube"
+      }
+      )
+      this.setChatbotMessage(message);
+    }
+
+    tngHandler = () => {
+      const message = this.createChatBotMessage( "Do you mean: ", {
+        widget: "tng"
+      })
+      
+      this.setChatbotMessage(message);
+    }
 
    createClientMesssage = (message) => {
       const clientMessage = {

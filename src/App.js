@@ -59,6 +59,9 @@ function App() {
           className="app-chatbot-button"
           onClick={() => toggleBot((prev) => !prev)}
         >
+          <div class="overlay">
+            <div class ="text"> Click me! </div>
+          </div>
           <svg viewBox="0 0 640 512" className="app-chatbot-button-icon">
           </svg>
         </button>
