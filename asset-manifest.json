@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/Chatbot/static/css/main.823c4850.chunk.css",
-    "main.js": "/Chatbot/static/js/main.c7929d09.chunk.js",
-    "main.js.map": "/Chatbot/static/js/main.c7929d09.chunk.js.map",
+    "main.js": "/Chatbot/static/js/main.773528e6.chunk.js",
+    "main.js.map": "/Chatbot/static/js/main.773528e6.chunk.js.map",
     "runtime-main.js": "/Chatbot/static/js/runtime-main.bbce4f2c.js",
     "runtime-main.js.map": "/Chatbot/static/js/runtime-main.bbce4f2c.js.map",
-    "static/js/2.6328e645.chunk.js": "/Chatbot/static/js/2.6328e645.chunk.js",
-    "static/js/2.6328e645.chunk.js.map": "/Chatbot/static/js/2.6328e645.chunk.js.map",
+    "static/js/2.445c797b.chunk.js": "/Chatbot/static/js/2.445c797b.chunk.js",
+    "static/js/2.445c797b.chunk.js.map": "/Chatbot/static/js/2.445c797b.chunk.js.map",
     "index.html": "/Chatbot/index.html",
-    "precache-manifest.b3a88ea953a347cd4f7643578afa1c76.js": "/Chatbot/precache-manifest.b3a88ea953a347cd4f7643578afa1c76.js",
+    "precache-manifest.3929582d8e96a02d150a9bf69fea1368.js": "/Chatbot/precache-manifest.3929582d8e96a02d150a9bf69fea1368.js",
     "service-worker.js": "/Chatbot/service-worker.js",
     "static/css/main.823c4850.chunk.css.map": "/Chatbot/static/css/main.823c4850.chunk.css.map",
-    "static/js/2.6328e645.chunk.js.LICENSE.txt": "/Chatbot/static/js/2.6328e645.chunk.js.LICENSE.txt",
+    "static/js/2.445c797b.chunk.js.LICENSE.txt": "/Chatbot/static/js/2.445c797b.chunk.js.LICENSE.txt",
+    "static/media/ab1.png": "/Chatbot/static/media/ab1.8f2c1ebd.png",
     "static/media/ab2.jpg": "/Chatbot/static/media/ab2.e00a07f5.jpg",
     "static/media/bot.jpg": "/Chatbot/static/media/bot.5b5f61a9.jpg",
     "static/media/link.665a8aa5.svg": "/Chatbot/static/media/link.665a8aa5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bbce4f2c.js",
-    "static/js/2.6328e645.chunk.js",
+    "static/js/2.445c797b.chunk.js",
     "static/css/main.823c4850.chunk.css",
-    "static/js/main.c7929d09.chunk.js"
+    "static/js/main.773528e6.chunk.js"
   ]
 }

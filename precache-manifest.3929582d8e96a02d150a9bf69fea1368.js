@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2088b32c08b5b9227113bfda026a8fa6",
+    "revision": "209e7819758de851ff8b38eb022776a1",
     "url": "/Chatbot/index.html"
   },
   {
-    "revision": "10d85c3954b29ef95d87",
+    "revision": "104d5d7374a5fdf22167",
     "url": "/Chatbot/static/css/main.823c4850.chunk.css"
   },
   {
-    "revision": "ca84a0922b921cafa081",
-    "url": "/Chatbot/static/js/2.6328e645.chunk.js"
+    "revision": "fe41a15f46a31e0de7fd",
+    "url": "/Chatbot/static/js/2.445c797b.chunk.js"
   },
   {
     "revision": "eefcf1de2988f9e0bf25685218038938",
-    "url": "/Chatbot/static/js/2.6328e645.chunk.js.LICENSE.txt"
+    "url": "/Chatbot/static/js/2.445c797b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "10d85c3954b29ef95d87",
-    "url": "/Chatbot/static/js/main.c7929d09.chunk.js"
+    "revision": "104d5d7374a5fdf22167",
+    "url": "/Chatbot/static/js/main.773528e6.chunk.js"
   },
   {
     "revision": "ae5d040c25c6a31ccada",
     "url": "/Chatbot/static/js/runtime-main.bbce4f2c.js"
+  },
+  {
+    "revision": "8f2c1ebdc9aaa20b91ffa71ae367de54",
+    "url": "/Chatbot/static/media/ab1.8f2c1ebd.png"
   },
   {
     "revision": "e00a07f5cc8e50dac76d5845a8b04e89",
