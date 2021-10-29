@@ -1208,6 +1208,9 @@ h4.tittle {
     padding-top: 25vw;
     margin: 0 2em;
 }
+
+
+
 }
 @media(max-width:600px) {
 	h4.agile-title, h1.agile-title, h2.agile-title {
