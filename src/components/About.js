@@ -48,7 +48,7 @@ class About extends Component{
 
                 </div>
                 <div className="col-md-5 content-w3pvt-img mt-lg-0 mt-3">
-                    <img src="icons/ab2.png" alt="" className="img-fluid" />
+                    <img src="icons/ab2.jpg" alt="" className="img-fluid" />
                 </div>
             </div>
         </div>
