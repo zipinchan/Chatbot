@@ -26,7 +26,7 @@ class About extends Component{
 	<h3 className="heading text-center mb-3 mb-sm-5">About Us</h3>
             <div className="row mid-grids mt-lg-5 mt-3">
                 <div className="col-md-5 content-w3pvt-img">
-                    <img src="/icons/ab1.png" alt="here" className="img-fluid" />
+                    <img src="./icons/ab1.png" alt="here" className="img-fluid" />
                 </div>
                 <div className="col-md-7 content-left-bottom entry-w3ls-info text-left mt-3">
                     <h5 className="mt-1">User-friendly</h5>
@@ -48,7 +48,7 @@ class About extends Component{
 
                 </div>
                 <div className="col-md-5 content-w3pvt-img mt-lg-0 mt-3">
-                    <img src= { require ("/icons/ab2.jpg")} alt="here" className="img-fluid" />
+                    <img src= { require ("./icons/ab2.jpg")} alt="here" className="img-fluid" />
                 </div>
             </div>
         </div>
