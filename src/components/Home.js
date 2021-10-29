@@ -21,7 +21,7 @@ class Home extends  Component{
 					<div className="bs-slider-overlay">
 						<div className="banner-text">
 							<div className="container">
-							<h2 className="movetxt agile-title text-capitalize"> Use NerdyBot at Anywhere, Anytime. </h2>
+							<h2 className="movetxt agile-title text-capitalize">  NerdyBot at Anywhere, Anytime. </h2>
 								<p> This chatbot provides real-time assistance on chatbot utilization as long as the device is connected to the Internet.  </p>
 								<p> Click on the blue bot at the bottom left on your screen to start chatting with NerdyBot! </p>
 								{/* 
