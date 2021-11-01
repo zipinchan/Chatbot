@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 
+import I18n from '../I18n';
+
 class Home extends  Component{
     render(){
         return(
@@ -21,15 +23,9 @@ class Home extends  Component{
 					<div className="bs-slider-overlay">
 						<div className="banner-text">
 							<div className="container">
-							<h2 className="movetxt agile-title text-capitalize"> Use NerdyBot at Anywhere, Anytime. </h2>
-								<p> This chatbot provides real-time assistance on chatbot utilization as long as the device is connected to the Internet.  </p>
-								<p> Click on the blue bot at the bottom left on your screen to start chatting with NerdyBot! </p>
-								{/* 
-								<h2 class="movetxt agile-title text-capitalize">Hands-on Smartphone Training for Seniors</h2>
-								<p>Our goal is <br/> - introduce the smartphone and usage of Internet on smartphone to senior <br/> - improve and build senior's ability on the utilization of smartphone and Internet</p>
-								
-								<Link to='/register' class="btn"> Register </Link>
-								*/}
+							<h2 className="movetxt agile-title text-capitalize"> {I18n.t('home.title')} </h2>
+								<p> {I18n.t('home.caption_1')}  </p>
+								<p> {I18n.t('home.caption_2')} </p>
 							</div>
 						</div>
 					</div>
@@ -43,10 +39,10 @@ class Home extends  Component{
 					<div className="bs-slider-overlay1">
 						<div className="banner-text">
 							<div className="container">
-							<h2 className="movetxt agile-title text-capitalize">Hands-on Smartphone Training for Seniors</h2>
-								<p>Our goal is <br/> - introduce the smartphone and usage of Internet on smartphone to senior <br/> - improve and build senior's ability on the utilization of smartphone and Internet</p>
+							<h2 className="movetxt agile-title text-capitalize">{I18n.t('home.title_2')}</h2>
+								<p>{I18n.t('home.title_2_caption_1')} <br/> {I18n.t('home.goal_1')}</p> <br/> {I18n.t('home.goal_2')}
 								
-								<Link to='/register' className="btn"> Register </Link>
+								<Link to='/register' className="btn"> {I18n.t('home.register')} </Link>
 							</div>
 						</div>
 					</div>

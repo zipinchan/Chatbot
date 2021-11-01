@@ -8,6 +8,7 @@
 
 //The final piece of the puzzle is the actionprovider. We'll take a look at that next. It will handle bot actions. It will come as no surprise then, that the actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
 
+import i18n from '../../I18n';
 
 var whatsappKnowledge = [
   { message: "WhatsApp uses your phone’s cellular or Wi-Fi connection to facilitate messaging and voice calling to nearly anyone on the planet, alone or in a group and is especially nice for families and small collaborative workgroups. The app lets you make calls, send and receive messages, and share documents, photos, and videos." }
@@ -393,7 +394,7 @@ class MessageParser {
 
       const lowerCaseMessage = message.toLowerCase()
 
-      if ((lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && (!lowerCaseMessage.includes("history")) && (!lowerCaseMessage.includes("this"))) {
+      if ((lowerCaseMessage.includes(i18n.t("message_parser.hello")) || lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("your name") || lowerCaseMessage.includes("who are you")) && (!lowerCaseMessage.includes("history")) && (!lowerCaseMessage.includes("this"))) {
         this.actionProvider.handler(helloWorldHandler);
         }
 

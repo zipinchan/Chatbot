@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import I18n from '../../I18n';
 
 class Footer extends Component{
     render(){
@@ -13,14 +13,14 @@ class Footer extends Component{
                         <h2>
                             <Link to='/'>NerdyBot </Link>
                         </h2>
-                        <p className="my-3"> Hands-on Smartphone Training for Seniors </p>
+                        <p className="my-3"> {I18n.t('home.title_2')} </p>
                         <p>
-                        The training session is divided into three phases: Introductory, Exploring New Information / Knowledge and Review. Each session will take about 10 minutes introduction, 10 minutes on new information / knowledge and 10 minutes for questions and review. Upon completion of training, there is daily homework for independent practice.
+                        {I18n.t('footer.caption')}
                         </p>
                     </div>
                     <div className="col-lg-3 col-md-6 mt-lg-0 mt-5">
                         <div className="footer-w3pvt">
-                            <h3 className="mb-3 w3pvt_title">Contact Us</h3>
+                            <h3 className="mb-3 w3pvt_title"> {I18n.t('footer.contact')}</h3>
                             <hr/>
                             <div className="last-w3ls-contact">
                                 <p>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import I18n from '../I18n';
 import {Link} from 'react-router-dom';
 
 class About extends Component{
@@ -14,25 +14,25 @@ class About extends Component{
 <div className="breadcrumb-agile">
 	<ol className="breadcrumb mb-0">
 		<li className="breadcrumb-item">
-			<Link to='/'>Home</Link>
+			<Link to='/'>{I18n.t('home.home')}</Link>
 		</li>
-		<li className="breadcrumb-item active" aria-current="page">About Us</li>
+		<li className="breadcrumb-item active" aria-current="page">{I18n.t('about.title')}</li>
 	</ol>
 </div>
 {/* <!-- //page details -->
 	<!--about-mid --> */}
     <section className="banner-bottom py-5" id="exp">
         <div className="container py-md-5">
-	<h3 className="heading text-center mb-3 mb-sm-5">About Us</h3>
+	<h3 className="heading text-center mb-3 mb-sm-5">{I18n.t('about.title')}</h3>
             <div className="row mid-grids mt-lg-5 mt-3">
                 <div className="col-md-5 content-w3pvt-img">
                     <img src= { require ("./icons/ab1.png")} alt="here" className="img-fluid" />
                 </div>
                 <div className="col-md-7 content-left-bottom entry-w3ls-info text-left mt-3">
-                    <h5 className="mt-1">User-friendly</h5>
-                    <h4>Easy to Learn, Use, Understand
-                        <br/>Increases Satisfaction</h4>
-                    <p className="mt-2 text-left"> NerdyBot is user-friendly for easy navigation to increase productivity and efficiency. NerdyBot uses the most suitable visual representation to help you to relax while interacting with Nerdybot. </p>
+                    <h5 className="mt-1">{I18n.t('about.h5')}</h5>
+                    <h4>{I18n.t('about.h4')}
+                        <br/>{I18n.t('about.h4_1')}</h4>
+                    <p className="mt-2 text-left"> {I18n.t('about.p')} </p>
 
                 </div>
 
@@ -41,10 +41,10 @@ class About extends Component{
             <div className="row mid-grids mt-lg-5 mt-3 py-3">
 
                 <div className="col-md-7 content-left-bottom entry-w3ls-info text-left mt-3">
-                    <h5 className="mt-1">Real-time Assistance</h5>
-                    <h4>Save Time
-                        <br />Save Energy</h4>
-                    <p className="mt-2 text-left">Engage and interact with the NerdyBot at anywhere, anytime as long as you're connected to the internet. Does not know how to use mobile applications? Just ask NerdyBot and it will answer you!</p>
+                    <h5 className="mt-1">{I18n.t('about.h5_2')}</h5>
+                    <h4>{I18n.t('about.h4_2')}
+                        <br />{I18n.t('about.h4_2_1')}</h4>
+                    <p className="mt-2 text-left">{I18n.t('about.p_2')}</p>
 
                 </div>
                 <div className="col-md-5 content-w3pvt-img mt-lg-0 mt-3">

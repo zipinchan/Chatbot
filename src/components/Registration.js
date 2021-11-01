@@ -1,5 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
+import I18n from '../I18n';
+
 
 class Registration extends Component{
     render(){
@@ -40,9 +42,9 @@ class Registration extends Component{
   </div>
         <div className="container py-md-5">
             <div className="text-center px-lg-5">
-                <h3 className="heading text-center mb-3 mb-sm-5">Registration</h3>
+                <h3 className="heading text-center mb-3 mb-sm-5">{I18n.t('home.registration')}</h3>
                 <div className="title-desc text-center px-lg-5">
-                    <p className="px-lg-5 sub-wthree"> Register for hands-on smartphone training for seniors now!  </p>
+                    <p className="px-lg-5 sub-wthree"> {I18n.t('registration.title')}  </p>
                 </div>
             </div>
             <div className="contact-w3pvt-form mt-5">
@@ -50,21 +52,21 @@ class Registration extends Component{
                     <div className="row">
                         <div className="col-lg-6">
                             <div class="form-group">
-                                <label>First Name</label>
+                                <label>{I18n.t('feedback.form_1')}</label>
                                 <input className="form-control" type="text" name="Name" placeholder="" required="" />
                             </div>
                             <div className="form-group">
-                                <label>Last Name</label>
+                                <label>{I18n.t('feedback.form_2')}</label>
                                 <input className="form-control" type="text" name="Name" placeholder="" required="" />
                             </div>
                             <div className="form-group">
-                                <label>Email</label>
+                                <label>{I18n.t('feedback.form_3')}</label>
                                 <input className="form-control" type="email" name="Email" placeholder="" required="" />
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="form-group">
-                                <label>Write Message</label>
+                                <label>{I18n.t('feedback.form_4')}</label>
                                 <textarea className="form-control" name="Message" placeholder="" required=""></textarea>
                             </div>
                         </div>

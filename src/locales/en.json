@@ -1,0 +1,53 @@
+{
+    "home": {
+        "title": "Use NerdyBot at Anywhere, Anytime.",
+        "caption_1": "This chatbot provides real-time assistance on smartphone utilization as long as the device is connected to the Internet.",
+        "caption_2": "Click on the blue bot at the bottom left on your screen to start chatting with NerdyBot!",
+        "title_2": "Hands-on Smartphone Training for Seniors",
+        "title_2_caption_1": "Our goal is",
+        "goal_1": "- introduce the smartphone and usage of Internet on smartphone to senior",
+        "goal_2": "- improve and build senior's ability on the utilization of smartphone and Internet",
+        "register": "Register",
+        "home": "Home",
+        "about": "About",
+        "registration": "Registration",
+        "feedback": "Feedback" 
+        
+    },
+
+    "feedback": {
+        "title": "Provide Us Your Feedback",
+        "title_2":"feedback", 
+        "caption_1": "Feel free to provide us your feedback. Your feedback is important to help us improve our website and improve your satisfaction level.",
+        "form_1":"First Name",
+        "form_2":"Last Name",
+        "form_3":"Email",
+        "form_4":"Write Feedback",
+        "submit": "submit"
+    },
+
+    "message_parser": {
+        "hello": "hello"
+    },
+
+    "registration": {
+        "title":"Register for hands-on smartphone training for seniors now!"
+    }, 
+
+    "about": {
+        "title": "About Us",
+        "h5": "User-friendly",
+        "h4": "Easy to Learn, Use, Understand",
+        "h4_1": "Increases Satisfaction",
+        "p": "NerdyBot is user-friendly for easy navigation to increase productivity and efficiency. NerdyBot uses the most suitable visual representation to help you to relax while interacting with Nerdybot.",
+        "h5_2": "Real-time Assistance",
+        "h4_2" : "Save Time",
+        "h4_2_1": "Save Energy",
+        "p_2": "Engage and interact with the NerdyBot at anywhere, anytime as long as you're connected to the internet. Does not know how to use mobile applications? Just ask NerdyBot and it will answer you!"
+    },
+
+    "footer": {
+        "caption": "The training session is divided into three phases: Introductory, Exploring New Information / Knowledge and Review. Each session will take about 10 minutes introduction, 10 minutes on new information / knowledge and 10 minutes for questions and review. Upon completion of training, there is daily homework for independent practice.",
+        "contact": "Contact Us"
+    }
+}
