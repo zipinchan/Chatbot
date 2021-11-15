@@ -71,7 +71,6 @@ class Registration extends Component{
                             </div>
                         </div>
                         <div className="form-group mx-auto mt-3">
-                            {/* <button type="submit" className="btn submit">Submit</button> */}
                         </div>
                     </div>
 

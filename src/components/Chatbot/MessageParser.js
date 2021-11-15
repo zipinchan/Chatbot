@@ -1,12 +1,6 @@
 //The message parser controls what happens when the user sends a message.
 
-//import { isCompositeComponent } from "react-dom/test-utils";
-
-//You have to implement this yourself. The beauty of this is that you can make the message parsing as complex or as simple as you'd like.
-
-//The only method that the message parser needs to implement is the "parse" method. This method is called inside the chatbot when it receives a message from the user.
-
-//The final piece of the puzzle is the actionprovider. We'll take a look at that next. It will handle bot actions. It will come as no surprise then, that the actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
+//The actionprovider is given to the messageparser, so that the messageparser can invoke the correct actions after the message is parsed.
 
 import i18n from '../../I18n';
 

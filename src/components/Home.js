@@ -14,7 +14,6 @@ class Home extends  Component{
 <div class="banner_w3lspvt" id="home">
 	<div class="csslider infinity" id="slider1">
 		<input type="radio" class="slides" id="slides_1"/>
-		{/*checked="checked" */}
 		<input type="radio" class="slides" id="slides_2"/>
 
 		<ul className="banner_slide_bg">

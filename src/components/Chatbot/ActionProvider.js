@@ -1,29 +1,11 @@
 //The actionprovider controls what kind of action that the chatbot is going to perform.
-//The actionprovider is given the createChatBotMessage and createClientMessage functions in the constructor, which you can use to create a new responses.
 
-// const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-
-// import { retrieveChat } from '../../firebase';
 
 
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, stateRef) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
-    //   this.recognition = new SpeechRecognition()
-    //     this.recognition.continous = true
-    //     this.recognition.interimResults = false
-    //     this.recognition.lang = 'en-US'
-    //     this.recognition.maxAlternatives = 1;
-
-    //     this.recognition.start()
-    //     this.recognition.onresult = (e) => {
-    //         if  (e.results[0].isFinal) {
-    //             const transcript = e.results[0][0].transcript;
-    //             this.recognition.abort()
-    //             this.parse(transcript) 
-    //         }
-    // }
   }
 
 
@@ -89,15 +71,6 @@ class ActionProvider {
 
           return clientMessage;
     }
-
-
-  //  userMessage = () => {
-  //   //  const message1 = this.createClientMesssage(message);
-  //    // this.setClientMessage(message)
-  //    setTimeout(() => {
-  //     this.recognition.start();
-  //   }, 1000) 
-  //   } 
 
 
     setClientMessage = (clientMessage) => {
