@@ -1,10 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-
 
 html,
 body {
@@ -129,13 +122,6 @@ p.sub-para {
     font-weight: 600;
 }
 
-/* .home h3 {
-    font-size: 2em;
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 400;
-    line-height: 1.15em;
-} */
 
 .slider-info p {
     color:#fff;
@@ -208,14 +194,14 @@ h4.agile-title,h1.agile-title,h2.agile-title { /*hands-on*/
     display: none;
 }
 
-/*
+
 .csslider>input:nth-of-type(3):checked~ul li:first-of-type {
     margin-left: -200%;
 }
 .csslider>input:nth-of-type(4):checked~ul li:first-of-type {
     margin-left: -300%;
 }
-*/
+
 
 
 
@@ -321,8 +307,8 @@ h4.agile-title,h1.agile-title,h2.agile-title { /*hands-on*/
 
 .csslider>input:nth-of-type(1):checked~.navigation label:nth-of-type(1):after,
 .csslider>input:nth-of-type(2):checked~.navigation label:nth-of-type(2):after
-/* .csslider>input:nth-of-type(3):checked~.navigation label:nth-of-type(3):after,
-.csslider>input:nth-of-type(4):checked~.navigation label:nth-of-type(4):after */ {
+.csslider>input:nth-of-type(3):checked~.navigation label:nth-of-type(3):after,
+.csslider>input:nth-of-type(4):checked~.navigation label:nth-of-type(4):after {
     opacity: 1;
 }
 

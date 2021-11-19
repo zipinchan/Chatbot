@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Chatbot/static/css/main.6de1ea92.chunk.css",
-    "main.js": "/Chatbot/static/js/main.773528e6.chunk.js",
-    "main.js.map": "/Chatbot/static/js/main.773528e6.chunk.js.map",
-    "runtime-main.js": "/Chatbot/static/js/runtime-main.bbce4f2c.js",
-    "runtime-main.js.map": "/Chatbot/static/js/runtime-main.bbce4f2c.js.map",
-    "static/js/2.445c797b.chunk.js": "/Chatbot/static/js/2.445c797b.chunk.js",
-    "static/js/2.445c797b.chunk.js.map": "/Chatbot/static/js/2.445c797b.chunk.js.map",
-    "index.html": "/Chatbot/index.html",
-    "precache-manifest.e1b2f5fa6e0b68bf01df6d653848cc75.js": "/Chatbot/precache-manifest.e1b2f5fa6e0b68bf01df6d653848cc75.js",
-    "service-worker.js": "/Chatbot/service-worker.js",
-    "static/css/main.6de1ea92.chunk.css.map": "/Chatbot/static/css/main.6de1ea92.chunk.css.map",
-    "static/js/2.445c797b.chunk.js.LICENSE.txt": "/Chatbot/static/js/2.445c797b.chunk.js.LICENSE.txt",
-    "static/media/ab1.png": "/Chatbot/static/media/ab1.8f2c1ebd.png",
-    "static/media/ab2.jpg": "/Chatbot/static/media/ab2.e00a07f5.jpg",
-    "static/media/bot.jpg": "/Chatbot/static/media/bot.5b5f61a9.jpg",
-    "static/media/link.665a8aa5.svg": "/Chatbot/static/media/link.665a8aa5.svg"
+    "main.css": "/zipinchan/Chatbot/static/css/main.c1caac2a.chunk.css",
+    "main.js": "/zipinchan/Chatbot/static/js/main.27874d02.chunk.js",
+    "main.js.map": "/zipinchan/Chatbot/static/js/main.27874d02.chunk.js.map",
+    "runtime-main.js": "/zipinchan/Chatbot/static/js/runtime-main.96b3efd4.js",
+    "runtime-main.js.map": "/zipinchan/Chatbot/static/js/runtime-main.96b3efd4.js.map",
+    "static/js/2.b98259e5.chunk.js": "/zipinchan/Chatbot/static/js/2.b98259e5.chunk.js",
+    "static/js/2.b98259e5.chunk.js.map": "/zipinchan/Chatbot/static/js/2.b98259e5.chunk.js.map",
+    "index.html": "/zipinchan/Chatbot/index.html",
+    "precache-manifest.92664a375e73dd1218a64b3358b876b3.js": "/zipinchan/Chatbot/precache-manifest.92664a375e73dd1218a64b3358b876b3.js",
+    "service-worker.js": "/zipinchan/Chatbot/service-worker.js",
+    "static/css/main.c1caac2a.chunk.css.map": "/zipinchan/Chatbot/static/css/main.c1caac2a.chunk.css.map",
+    "static/js/2.b98259e5.chunk.js.LICENSE.txt": "/zipinchan/Chatbot/static/js/2.b98259e5.chunk.js.LICENSE.txt",
+    "static/media/ab1.png": "/zipinchan/Chatbot/static/media/ab1.8f2c1ebd.png",
+    "static/media/ab2.jpg": "/zipinchan/Chatbot/static/media/ab2.e00a07f5.jpg",
+    "static/media/bot.jpg": "/zipinchan/Chatbot/static/media/bot.5b5f61a9.jpg",
+    "static/media/link.665a8aa5.svg": "/zipinchan/Chatbot/static/media/link.665a8aa5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bbce4f2c.js",
-    "static/js/2.445c797b.chunk.js",
-    "static/css/main.6de1ea92.chunk.css",
-    "static/js/main.773528e6.chunk.js"
+    "static/js/runtime-main.96b3efd4.js",
+    "static/js/2.b98259e5.chunk.js",
+    "static/css/main.c1caac2a.chunk.css",
+    "static/js/main.27874d02.chunk.js"
   ]
 }
