@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.c1caac2a.chunk.css",
-    "main.js": "./static/js/main.aeaff81b.chunk.js",
-    "main.js.map": "./static/js/main.aeaff81b.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.208ef3f0.js",
-    "runtime-main.js.map": "./static/js/runtime-main.208ef3f0.js.map",
-    "static/js/2.337419b7.chunk.js": "./static/js/2.337419b7.chunk.js",
-    "static/js/2.337419b7.chunk.js.map": "./static/js/2.337419b7.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.9b4d27a22570be03f152265041b7b415.js": "./precache-manifest.9b4d27a22570be03f152265041b7b415.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.c1caac2a.chunk.css.map": "./static/css/main.c1caac2a.chunk.css.map",
-    "static/js/2.337419b7.chunk.js.LICENSE.txt": "./static/js/2.337419b7.chunk.js.LICENSE.txt",
-    "static/media/ab1.png": "./static/media/ab1.8f2c1ebd.png",
-    "static/media/ab2.jpg": "./static/media/ab2.e00a07f5.jpg",
-    "static/media/bot.jpg": "./static/media/bot.5b5f61a9.jpg",
-    "static/media/link.665a8aa5.svg": "./static/media/link.665a8aa5.svg"
+    "main.css": "/Chatbot/static/css/main.c1caac2a.chunk.css",
+    "main.js": "/Chatbot/static/js/main.40723d96.chunk.js",
+    "main.js.map": "/Chatbot/static/js/main.40723d96.chunk.js.map",
+    "runtime-main.js": "/Chatbot/static/js/runtime-main.bbce4f2c.js",
+    "runtime-main.js.map": "/Chatbot/static/js/runtime-main.bbce4f2c.js.map",
+    "static/js/2.05e3fb66.chunk.js": "/Chatbot/static/js/2.05e3fb66.chunk.js",
+    "static/js/2.05e3fb66.chunk.js.map": "/Chatbot/static/js/2.05e3fb66.chunk.js.map",
+    "index.html": "/Chatbot/index.html",
+    "precache-manifest.59c8a9e9e4ea9cc91497372d76ccda97.js": "/Chatbot/precache-manifest.59c8a9e9e4ea9cc91497372d76ccda97.js",
+    "service-worker.js": "/Chatbot/service-worker.js",
+    "static/css/main.c1caac2a.chunk.css.map": "/Chatbot/static/css/main.c1caac2a.chunk.css.map",
+    "static/js/2.05e3fb66.chunk.js.LICENSE.txt": "/Chatbot/static/js/2.05e3fb66.chunk.js.LICENSE.txt",
+    "static/media/ab1.png": "/Chatbot/static/media/ab1.8f2c1ebd.png",
+    "static/media/ab2.jpg": "/Chatbot/static/media/ab2.e00a07f5.jpg",
+    "static/media/bot.jpg": "/Chatbot/static/media/bot.5b5f61a9.jpg",
+    "static/media/link.665a8aa5.svg": "/Chatbot/static/media/link.665a8aa5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.208ef3f0.js",
-    "static/js/2.337419b7.chunk.js",
+    "static/js/runtime-main.bbce4f2c.js",
+    "static/js/2.05e3fb66.chunk.js",
     "static/css/main.c1caac2a.chunk.css",
-    "static/js/main.aeaff81b.chunk.js"
+    "static/js/main.40723d96.chunk.js"
   ]
 }
